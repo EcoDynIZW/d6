@@ -51,7 +51,5 @@ d6::new_project("project", github = TRUE, private_repo = F)
 ```
 
 Note that to create a GitHub repo you will need to have configured your
-system as explained in
-<http://www.rdocumentation.org/packages/devtools/functions/use_github>.
-And for Travis to run you will need to activate it at
-<https://travis-ci.org/profile>.
+system as explained
+[here](http://www.rdocumentation.org/packages/devtools/functions/use_github).
