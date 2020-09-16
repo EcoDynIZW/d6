@@ -15,9 +15,9 @@ rstudioapi::navigateToFile("readme.md")
 
 ## Add license if needed
 ## See ?usethis::use_mit_license for more information
-usethis::use_mit_license( name = "Golem User" )
+usethis::use_mit_license( name = "Your Name" )
 
-## Add package dpendencies
+## Add package dependencies
 ## Add one line by package you want to add as dependency
 usethis::use_package("tidyverse")
 

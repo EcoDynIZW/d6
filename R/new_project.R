@@ -63,7 +63,7 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   golem:::cat_green_tick("Added project descriptions")
   
   file.copy(
-    system.file("01_start.R", package = "d6proj"),
+    system.file("00_start.R", package = "d6"),
     path_full
   )
   
