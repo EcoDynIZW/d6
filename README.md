@@ -16,11 +16,10 @@ devtools::install_github("EcoDynIZW/d6")
 
 ### Usage
 
-First, load the package
-
-Run the function `new_project` to create a directory with all the
-scaffolding we use for all projects in our department. For example, to
-start a new project in the current working directory, just use:
+To create a new project, run the function `new_project`. This will
+create a directory with all the scaffolding we use for all projects in
+our department. For example, to start a new project in the current
+working directory, just use:
 
 ``` r
 d6::new_project("project")
