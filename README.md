@@ -1,7 +1,7 @@
 
-# `d6` package <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
+# `d6` Package <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
 
-## Generic templates for D6 research projects
+## Generic Templates for D6 Research Projects
 
 This package works as a template for new research projects, under the
 idea of having everything (data, R scripts, functions and
@@ -14,7 +14,7 @@ compendium’) to facilitate collaboration and promote reproducibility.
 devtools::install_github("EcoDynIZW/d6")
 ```
 
-### Usage
+### Create Project Directory
 
 To create a new project, run the function `new_project`. This will
 create a directory with all the scaffolding we use for all projects in
@@ -24,6 +24,8 @@ working directory, just use:
 ``` r
 d6::new_project("project")
 ```
+
+#### Custom Root Directory
 
 You don’t need to change the working directory first you can also
 specify a path to a custom root folder in which the new project folder
@@ -38,6 +40,8 @@ d6::new_project("project", path = "absolute/path/to/the/root/folder/")
 
 The resulting final directory of your project would be
 `absolute/path/to/the/root/folder/project`.
+
+#### Use Version Control
 
 If you want to create a GitHub repository for the project at the same
 time, use instead:
@@ -56,3 +60,21 @@ d6::new_project("project", github = TRUE, private_repo = FALSE)
 Note that to create a GitHub repo you will need to have configured your
 system as explained
 [here](http://www.rdocumentation.org/packages/devtools/functions/use_github).
+
+#### Setup without Geo Directories
+
+If your project does not (or will not) contain any spatial data, you can
+prevent the creation of the directories `geo-raw` and `geo-proc` by
+setting `geo` to `FALSE`:
+
+``` r
+d6::new_project("project", geo = FALSE)
+```
+
+### Use Script Templates
+
+The package also provides several templates for your scripts. In
+Rstudio, navigate to `File > New File > RMarkdown... > Templates` and
+choose the template you want to use.
+
+The following templates are available:
