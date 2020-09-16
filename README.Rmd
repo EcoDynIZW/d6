@@ -12,6 +12,7 @@ This package works as a template for new research projects, under the idea of ha
 ## Installation
 
 ```{r eval=FALSE}
+install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
 ```
 

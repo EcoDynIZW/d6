@@ -11,6 +11,7 @@ compendium’) to facilitate collaboration and promote reproducibility.
 ## Installation
 
 ``` r
+install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
 ```
 
