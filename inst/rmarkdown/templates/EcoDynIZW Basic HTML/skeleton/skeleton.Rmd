@@ -1,0 +1,39 @@
+---
+title: "Your Project"
+author: "Your Name"
+date: "`r Sys.Date()`"    ## current date
+output:
+  html_document:
+		theme: paper          ## choose theme
+    highlight: kate       ## choose code style
+    toc_depth: 3          ## table of content
+    toc_float: true       ## allow toc next to doc
+    code_folding: show    ## show code by default (set to 'hide' otherwise)
+    code_download: true   ## allow download of source
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE)
+```
+
+## Setup
+
+```{r packages}
+## for non-CRAN packages please keep install instruction
+## but commented so it is not run each time
+# devtools::install_github("EcoDynIZW/template")
+
+## libraries used in this script
+## please add ALL LIBRARIES NEEDED here
+## please remove libraries that are not needed anymore at a later stage
+library()
+```
+
+
+## Data
+
+```{r data}
+
+```
+
+

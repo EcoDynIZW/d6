@@ -1,0 +1,21 @@
+Package: d6
+Title: Template for D6 research projects
+Version: 0.0.0.9000
+Date: 2020-09-16
+Authors@R: "Cedric Scherer <cedricphilippscherer@gmail.com> [aut, cre]"
+Description: This package works as a template for new research
+    projects, under the idea of having everything (data, R scripts, functions
+    and manuscript/reports) contained in the same package (a 'research compendium')
+    to facilitate collaboration and promote reproducibility.
+Depends:
+    R (>= 3.1.1)
+License: CC0
+LazyData: true
+URL: https://github.com/EcoDynIZW/d6proj
+BugReports: https://github.com/EcoDynIZW/d6proj/issues
+Imports:
+    devtools
+Suggests:
+    rmdTemplates,
+    testthat
+RoxygenNote: 7.1.1

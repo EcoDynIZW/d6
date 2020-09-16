@@ -1,0 +1,12 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^data-raw$
+^analyses$
+^manuscript$
+^\.travis\.yml$
+README.Rmd
+
+^slides$
+
+
+^README\.Rmd$

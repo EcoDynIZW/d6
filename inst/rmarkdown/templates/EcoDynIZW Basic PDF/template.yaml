@@ -1,0 +1,4 @@
+name: EcoDynIZW Basic PDF
+description: >
+   Template for a basic Rmarkdown report as PDF
+create_dir: FALSE
