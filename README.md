@@ -1,20 +1,22 @@
 
 # `d6` Package <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
 
-## Generic Templates for D6 Research Projects
+### Generic Templates for D6 Research Projects
 
 This package works as a template for new research projects, under the
 idea of having everything (data, R scripts, functions and
 manuscript/reports) contained in the same package (a ‘research
 compendium’) to facilitate collaboration and promote reproducibility.
 
-### Installation
+## Installation
 
 ``` r
 devtools::install_github("EcoDynIZW/d6")
 ```
 
-### Create Project Directory
+<br>
+
+## Create Project Directory
 
 To create a new project, run the function `new_project`. This will
 create a directory with all the scaffolding we use for all projects in
@@ -25,7 +27,7 @@ working directory, just use:
 d6::new_project("project")
 ```
 
-#### Custom Root Directory
+#### Use A Custom Root Directory
 
 You don’t need to change the working directory first you can also
 specify a path to a custom root folder in which the new project folder
@@ -71,13 +73,15 @@ setting `geo` to `FALSE`:
 d6::new_project("project", geo = FALSE)
 ```
 
-### Add Documentation to Your Project
+<br>
+
+## Add Documentation to Your Project
 
 After you have set up your project directory, open the file `00_start.R`
 in the `R` folder. Add the details of your project, fill in the readme,
-add a MIT license (if needed) and add package dependencies.
+add a MIT license (if needed) and add package dependencies. <br><br>
 
-### Use Script Templates
+## Use Script Templates
 
 The package also provides several templates for your scripts. In
 Rstudio, navigate to `File > New File > RMarkdown... > Templates` and
