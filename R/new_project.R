@@ -5,13 +5,14 @@
 #' @param name Name of the new project. A new folder will be created with that name.
 #' @param path path of the new project where the folder is created. If empty then the current working directory is used.
 #' @param github Logical. Create GitHub repo? Note this requires a \code{GITHUB_PAT}. See \code{\link[devtools]{use_github}}.
-#' @param private.repo Logical. Default is TRUE.
+#' @param private_repo Logical. Default is TRUE.
+#' @param geo Logical. Create directories for spatial data? Default is TRUE.
 #'
 #' @return A new directory with R package structure, slightly modified.
 #' @export
 #' @import fs devtools usethis golem
 #'
-new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRUE){
+new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRUE, geo = TRUE){
 
   end <- substr(path, (nchar(path) + 1) - 1, nchar(path))
   
@@ -37,13 +38,14 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   dir.create(file.path(path_full, "docs", "manuscript"))
   dir.create(file.path(path_full, "docs", "presentations"))
   ## data dir
-  dir.create(file.path(path_full, "data"))
-  dir.create(file.path(path_full, "data", "data_raw"))
-  dir.create(file.path(path_full, "data", "geo_raw"))
+  dir.create(file.path(path_full, "data-raw"))
+  #dir.create(file.path(path_full, "data", "data_raw"))
+  #dir.create(file.path(path_full, "data", "geo_raw"))
+  if(geo == TRUE) { dir.create(file.path(path_full, "data-raw", "geo-raw")) }
   ## output dir
   dir.create(file.path(path_full, "output"))
-  dir.create(file.path(path_full, "output", "data_proc"))
-  dir.create(file.path(path_full, "output", "geo_proc"))
+  dir.create(file.path(path_full, "output", "data-proc"))
+  if(geo == TRUE) { dir.create(file.path(path_full, "output", "geo-proc")) }
   dir.create(file.path(path_full, "output", "plots"))
   dir.create(file.path(path_full, "output", "tables"))
   
