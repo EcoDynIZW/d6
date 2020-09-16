@@ -21,7 +21,7 @@ devtools::install_github("EcoDynIZW/d6")
 
 ## Create Project Directory
 
-To create a new project, run the function `new_project`. This will create a directory with all the scaffolding we use for all projects in our department. For example, to start a new project in the current working directory, just use:
+To create a new project, run the function `new_project`. This will create a directory with all the scaffolding we use for all projects in our department. For example, to start a new project in the current working directory, simply run:
 
 ```{r eval=FALSE}
 d6::new_project("project")
