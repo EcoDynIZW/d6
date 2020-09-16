@@ -1,5 +1,5 @@
 
-# `d6` package <img src='man/figures/hexlogo_workflow_2.png' align="right" height="151.5" /></a>
+# `d6` package <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
 
 ## Generic templates for D6 research projects
 
