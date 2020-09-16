@@ -1,7 +1,7 @@
 
 ## `d6` package
 
-### Generic template for D6 research projects
+### Generic templates for D6 research projects
 
 This package works as a template for new research projects, under the
 idea of having everything (data, R scripts, functions and
@@ -11,7 +11,7 @@ compendium’) to facilitate collaboration and promote reproducibility.
 ### Installation
 
 ``` r
-devtools::install_github("EcoDynIZW/template")
+devtools::install_github("EcoDynIZW/d6")
 ```
 
 ### Usage
@@ -21,7 +21,7 @@ devtools::install_github("EcoDynIZW/template")
 <!-- end list -->
 
 ``` r
-library("template")
+library("d6")
 ```
 
 2.  Now run the function `new_project` to create a directory with all
