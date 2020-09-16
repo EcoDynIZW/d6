@@ -14,7 +14,7 @@ This package works as a template for new research projects, under the idea of ha
 ```{r eval=FALSE}
 devtools::install_github("EcoDynIZW/d6")
 ```
-<br>
+
 
 ## Create Project Directory
 
@@ -60,12 +60,12 @@ If your project does not (or will not) contain any spatial data, you can prevent
 ```{r eval=FALSE}
 d6::new_project("project", geo = FALSE)
 ```
-<br>
+
 
 ## Add Documentation to Your Project
 
 After you have set up your project directory, open the file `00_start.R` in the `R` folder. Add the details of your project, fill in the readme, add a MIT license (if needed) and add package dependencies.
-<br><br>
+
 
 ## Use Script Templates
 

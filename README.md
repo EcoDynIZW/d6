@@ -14,8 +14,6 @@ compendium’) to facilitate collaboration and promote reproducibility.
 devtools::install_github("EcoDynIZW/d6")
 ```
 
-<br>
-
 ## Create Project Directory
 
 To create a new project, run the function `new_project`. This will
@@ -73,13 +71,11 @@ setting `geo` to `FALSE`:
 d6::new_project("project", geo = FALSE)
 ```
 
-<br>
-
 ## Add Documentation to Your Project
 
 After you have set up your project directory, open the file `00_start.R`
 in the `R` folder. Add the details of your project, fill in the readme,
-add a MIT license (if needed) and add package dependencies. <br><br>
+add a MIT license (if needed) and add package dependencies.
 
 ## Use Script Templates
 
