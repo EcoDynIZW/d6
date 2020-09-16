@@ -16,29 +16,38 @@ devtools::install_github("EcoDynIZW/d6")
 
 ### Usage
 
-1.  First, load the package
+First, load the package
 
-<!-- end list -->
+Run the function `new_project` to create a directory with all the
+scaffolding we use for all projects in our department. For example, to
+start a new project in the current working directory, just use:
 
 ``` r
-library("d6")
+d6::new_project("project")
 ```
 
-2.  Now run the function `new_project` to create a directory with all
-    the scaffolding (slightly modified from R package structure). For
-    example, to start a new project about tree growth, just use:
-
-<!-- end list -->
+You don’t need to change the working directory firstyou can also specify
+a path:
 
 ``` r
-new_project("project")
+## both work:
+d6::new_project("project", path = "absolute/path/to/the/root/folder")
+## or:
+d6::new_project("project", path = "absolute/path/to/the/root/folder/")
 ```
 
-If you want to create a private GitHub repository for the project at the
-same time, use instead:
+If you want to create a GitHub repository for the project at the same
+time, use instead:
 
 ``` r
-new_project("project", github = TRUE, private.repo = TRUE)
+d6::new_project("project", github = TRUE)
+```
+
+By default, the visibility of the GitHub repository is set to “private”
+but you can also change that:
+
+``` r
+d6::new_project("project", github = TRUE, private_repo = F)
 ```
 
 Note that to create a GitHub repo you will need to have configured your
