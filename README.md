@@ -34,7 +34,7 @@ d6::new_project("project")
 
 #### Use A Custom Root Directory
 
-You don’t need to change the working directory first you can also
+You don’t need to change the working directory first—you can also
 specify a path to a custom root folder in which the new project folder
 is created:
 
