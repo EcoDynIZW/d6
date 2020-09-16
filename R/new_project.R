@@ -11,9 +11,11 @@
 #' @export
 #' @import fs devtools usethis golem
 #'
-new_project <- function(name, path = getwd(), github = FALSE, private.repo = TRUE){
+new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRUE){
 
-  path_full <- paste0(path, "/", name)
+  end <- substr(path, (nchar(path) + 1) - 1, nchar(path))
+  
+  if(end == "/") { path_full <- paste0(path, name) } else { path_full <- paste0(path, "/", name) }
   
   if (fs::dir_exists(path_full)){
     res <- golem:::yesno(
@@ -64,7 +66,7 @@ new_project <- function(name, path = getwd(), github = FALSE, private.repo = TRU
   )
   
   if (github){
-    usethis::use_github(pkg = name, private = private.repo)
+    usethis::use_github(pkg = name, private = private_repo)
     usethis::use_github_links(name)
   }
 
