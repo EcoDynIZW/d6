@@ -25,8 +25,9 @@ working directory, just use:
 d6::new_project("project")
 ```
 
-You don’t need to change the working directory firstyou can also specify
-a path:
+You don’t need to change the working directory first you can also
+specify a path to a custom root folder in which the new project folder
+is created:
 
 ``` r
 ## both work:
@@ -34,6 +35,9 @@ d6::new_project("project", path = "absolute/path/to/the/root/folder")
 ## or:
 d6::new_project("project", path = "absolute/path/to/the/root/folder/")
 ```
+
+The resulting final directory of your project would be
+`absolute/path/to/the/root/folder/project`.
 
 If you want to create a GitHub repository for the project at the same
 time, use instead:
@@ -46,7 +50,7 @@ By default, the visibility of the GitHub repository is set to “private”
 but you can also change that:
 
 ``` r
-d6::new_project("project", github = TRUE, private_repo = F)
+d6::new_project("project", github = TRUE, private_repo = FALSE)
 ```
 
 Note that to create a GitHub repo you will need to have configured your
