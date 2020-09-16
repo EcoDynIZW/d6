@@ -10,6 +10,10 @@ compendium’) to facilitate collaboration and promote reproducibility.
 
 ## Installation
 
+The package is not on CRAN and needs to be installed from GitHub. To do
+so, open Rstudio and run the following two lines in the console. In case
+the `{devtools}` package is already installed, skip that step.
+
 ``` r
 install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
