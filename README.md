@@ -91,3 +91,6 @@ Rstudio, navigate to `File > New File > RMarkdown... > Templates` and
 choose the template you want to use.
 
 The following templates are available:
+
+
+Based on the [template package by Francisco Rodriguez-Sanchez](https://github.com/Pakillo/template)
