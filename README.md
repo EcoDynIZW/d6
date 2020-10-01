@@ -1,5 +1,5 @@
 
-# `d6` — Simplify Workflows of D6 Research Projects <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
+## `d6` Package: <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a><br>Simplify Workflows of D6 Research Projects
 
 ## Aim
 
