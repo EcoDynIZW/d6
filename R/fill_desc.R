@@ -5,7 +5,6 @@
 #' @param author_first_name First Name of the author
 #' @param author_last_name Last Name of the author
 #' @param author_email Email of the author
-#' @param pkg_version package version
 #' @param repo_url URL (if needed)
 #' 
 #' @importFrom desc description
@@ -25,7 +24,6 @@ fill_desc <- function(
   author_first_name, 
   author_last_name, 
   author_email, 
-  pkg_version,
   repo_url = NULL,
   pkg = here::here()
 ){
@@ -47,9 +45,6 @@ fill_desc <- function(
   )
   desc$del(
     keys = "Maintainer"
-  )
-  desc$set_version(
-    version = pkg_version
   )
   desc$set(
     Title = pkg_title
