@@ -129,9 +129,13 @@ You can also render single Rmarkdown documents via `render_report()`:
 d6::render_all_reports()
 ```
 
+<br>
+
 ***
 
-#### Acknowledgements
+<br>
+
+### Acknowledgements:
 
 This package would not exist without the work of many great people!
 
