@@ -1,6 +1,6 @@
 Package: d6
 Title: Template for D6 research projects
-Version: 0.0.0.9000
+Version: 0.1.0.0
 Date: 2020-09-16
 Authors@R: "Cedric Scherer <cedricphilippscherer@gmail.com> [aut, cre]"
 Description: This package works as a template for new research
