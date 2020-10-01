@@ -46,3 +46,17 @@ library()
 ```
 
 
+***
+
+<details><summary>Session Info</summary>
+
+```{r sessionInfo}
+## DO NOT REMOVE!
+## We store the settings of your computer and the current versions of the
+## packages used to allow for reproducibility
+Sys.time()
+git2r::repository()
+sessionInfo()
+```
+
+</details>
