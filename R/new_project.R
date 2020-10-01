@@ -56,7 +56,7 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   cat_green_tick("Created directories")
   
   ## add Readmne.md
-  #setwd(path_full)
+  setwd(path_full)
   try(usethis::use_readme_md(), silent = TRUE)
   #try(usethis::use_package_doc(), silent = TRUE)
   
