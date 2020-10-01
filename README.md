@@ -19,7 +19,11 @@ There are three main functionalities:
 4.  [Render all Rmarkdown documents to ./docs/report with
     `render_all_reports()`](#render-rmarkdown-files-to-reports)
 
-# 
+<br>
+
+-----
+
+<br>
 
 ## Installation
 
@@ -32,7 +36,11 @@ install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
 ```
 
-# 
+<br>
+
+-----
+
+<br>
 
 ## Create Project Directory
 
@@ -99,7 +107,11 @@ After you have set up your project directory, open the file `00_start.R`
 in the `R` folder. Add the details of your project, fill in the readme,
 add a MIT license (if needed) and add package dependencies.
 
-# 
+<br>
+
+-----
+
+<br>
 
 ## Install Common Packages
 
@@ -122,7 +134,11 @@ are not intending to process geodata, set `geo` to `FALSE`:
 d6::install_d6_packages(geo = FALSE)
 ```
 
-# 
+<br>
+
+-----
+
+<br>
 
 ## Use Custom Rmarkdown Templates
 
@@ -138,7 +154,11 @@ The following templates are available for now:
   - *EcoDynIZW Data*: Template for an Rmarkdown research report for data
     import and cleaning
 
-# 
+<br>
+
+-----
+
+<br>
 
 ## Render Rmarkdown Files to Reports
 
@@ -179,8 +199,6 @@ This package would not exist without the work of many great people\!
     package](https://thinkr-open.github.io/golem/)
   - Rstudio for the development of Rmarkdown and all the great things
     that come with it (knitting, templates, themes, …)
-
-# 
 
 #### Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 

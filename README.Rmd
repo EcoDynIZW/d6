@@ -17,7 +17,11 @@ There are three main functionalities:
 1. [Provide custom Rmarkdown templates via `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
 1. [Render all Rmarkdown documents to ./docs/report with `render_all_reports()`](#render-rmarkdown-files-to-reports)
 
-#
+<br>
+
+***
+
+<br>
 
 ## Installation
 
@@ -28,7 +32,11 @@ install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
 ```
 
-#
+<br>
+
+***
+
+<br>
 
 ## Create Project Directory
 
@@ -82,7 +90,11 @@ d6::new_project("project", geo = FALSE)
 
 After you have set up your project directory, open the file `00_start.R` in the `R` folder. Add the details of your project, fill in the readme, add a MIT license (if needed) and add package dependencies.
 
-#
+<br>
+
+***
+
+<br>
 
 ## Install Common Packages
 
@@ -100,7 +112,11 @@ Again, there is an arguement `geo` so you can decide if you want to install comm
 d6::install_d6_packages(geo = FALSE)
 ```
 
-#
+<br>
+
+***
+
+<br>
 
 ## Use Custom Rmarkdown Templates
 
@@ -111,7 +127,11 @@ The following templates are available for now:
 * *EcoDynIZW Basic*: Template for a basic Rmarkdown research report (mostly empty)
 * *EcoDynIZW Data*: Template for an Rmarkdown research report for data import and cleaning
 
-#
+<br>
+
+***
+
+<br>
 
 ## Render Rmarkdown Files to Reports
 
@@ -143,8 +163,6 @@ This package would not exist without the work of many great people!
 * The code to create the project folder is based on the [template package by Francisco Rodriguez-Sanchez](https://github.com/Pakillo/template) (and references therein)
 * The 00_start script is inspired by the [`{golem}` package](https://thinkr-open.github.io/golem/)
 * Rstudio for the development of Rmarkdown and all the great things that come with it (knitting, templates, themes, ...)
-
-#
 
 #### Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
 <div style="width:300px; height:200px">
