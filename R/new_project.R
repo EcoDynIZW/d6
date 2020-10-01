@@ -10,69 +10,75 @@
 #'
 #' @return A new directory with R package structure, slightly modified.
 #' @export
-#' @import fs devtools usethis golem
+#' @import fs devtools usethis
+#' @importFrom cli cat_bullet 
+#' @importFrom utils menu
 #'
 new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRUE, geo = TRUE){
-
-  end <- substr(path, (nchar(path) + 1) - 1, nchar(path))
   
+  ## check path string
+  end <- substr(path, (nchar(path) + 1) - 1, nchar(path))
   if(end == "/") { path_full <- paste0(path, name) } else { path_full <- paste0(path, "/", name) }
   
+  ## check if folder exists already
   if (fs::dir_exists(path_full)){
-    res <- golem:::yesno(
-      paste("The path", path_full, "already exists, override?")
+    res <- yesno(
+      paste("The path", path_full, "already exists, overwrite?")
     )
     if (!res){
       return(invisible(NULL))
     }
   }
   
+  ## create dir
   devtools::create(path_full)
   
-  golem:::cat_green_tick("Created project directory")
+  cat_green_tick("Created project directory")
   
+  ## create directories
   ## docs dir
   dir.create(file.path(path_full, "docs"))
   dir.create(file.path(path_full, "docs", "admin"))
   dir.create(file.path(path_full, "docs", "literature"))
   dir.create(file.path(path_full, "docs", "manuscript"))
   dir.create(file.path(path_full, "docs", "presentations"))
-  ## data dir
+  dir.create(file.path(path_full, "docs", "reports"))
+  ## data-raw dir
   dir.create(file.path(path_full, "data-raw"))
-  #dir.create(file.path(path_full, "data", "data_raw"))
-  #dir.create(file.path(path_full, "data", "geo_raw"))
   if(geo == TRUE) { dir.create(file.path(path_full, "data-raw", "geo-raw")) }
   ## output dir
   dir.create(file.path(path_full, "output"))
   dir.create(file.path(path_full, "output", "data-proc"))
   if(geo == TRUE) { dir.create(file.path(path_full, "output", "geo-proc")) }
-  dir.create(file.path(path_full, "output", "plots"))
-  dir.create(file.path(path_full, "output", "tables"))
+  ## plots dir
+  dir.create(file.path(path_full, "plots"))
   
-  golem:::cat_green_tick("Created directories")
+  cat_green_tick("Created directories")
   
-  #cat("\n^analyses$ \n^manuscript$ \n", sep = "",
-  #    file = file.path(name, ".Rbuildignore"), append = TRUE)
-
-  setwd(path_full)
+  ## add Readmne.md
+  #setwd(path_full)
   try(usethis::use_readme_md(), silent = TRUE)
-  try(usethis::use_package_doc(), silent = TRUE)
-  #usethis::use_data_raw(path_full)
-  #usethis::use_testthat(path_full)
+  #try(usethis::use_package_doc(), silent = TRUE)
   
-  golem:::cat_green_tick("Added project descriptions")
+  cat_green_tick("Added project descriptions")
   
+  ## add scripts
   file.copy(
     system.file("00_start.R", package = "d6"),
-    path_full
+    file.path(path_full, "R")
+  )
+  file.copy(
+    system.file("XX_submit.R", package = "d6"),
+    file.path(path_full, "R")
   )
   
+  ## add GitHub
   if (github){
     usethis::use_github(pkg = name, private = private_repo)
     usethis::use_github_links(name)
   }
 
-  golem:::cat_green_tick("DONE")
+  cat_green_tick("DONE")
   
   cli::cat_line(
     paste0(
