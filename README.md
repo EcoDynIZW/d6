@@ -8,7 +8,7 @@
 > for Zoo and Wildlife Research by providing a standardized folder
 > structure, templates for reports and utility functions.
 
-There are four main functionalities:
+There are three main functionalities:
 
 1.  [Create project directiories with
     `new_project()`](#create-project-directory)
@@ -135,7 +135,7 @@ The following templates are available for now:
 
   - *EcoDynIZW Basic*: Template for a basic Rmarkdown research report
     (mostly empty)
-  - *EcoDynIZW Data*: Template for a Rmarkdown research report for data
+  - *EcoDynIZW Data*: Template for an Rmarkdown research report for data
     import and cleaning
 
 # 

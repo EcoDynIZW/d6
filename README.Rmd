@@ -109,7 +109,7 @@ The package also provides several templates for your scripts. In Rstudio, naviga
 The following templates are available for now:
 
 * *EcoDynIZW Basic*: Template for a basic Rmarkdown research report (mostly empty)
-* *EcoDynIZW Data*: Template for a Rmarkdown research report for data import and cleaning
+* *EcoDynIZW Data*: Template for an Rmarkdown research report for data import and cleaning
 
 #
 
