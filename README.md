@@ -19,7 +19,7 @@ There are three main functionalities:
     `install_d6_packages()`](#packages)
 3.  [Provide custom Rmarkdown templates via `File > New File >
     Rmarkdown... > From Template`](#templates)
-4.  [Render all Rmarkdown documents to the ./docs/report directory with
+4.  [Render all Rmarkdown documents to ./docs/report with
     `render_all_reports()`](#render)
 
 # 
