@@ -10,7 +10,7 @@
 
 There are three main functionalities:
 
-1.  [Create project directiories with
+1.  [Create standardized project directories with
     `new_project()`](#create-project-directory)
 2.  [Install a set of common packages with
     `install_d6_packages()`](#install-common-packages)
