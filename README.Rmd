@@ -119,3 +119,13 @@ You can also render single Rmarkdown documents via `render_report()`:
 ```{r eval=FALSE}
 d6::render_all_reports()
 ```
+
+---
+
+### Acknowledgements
+
+This package would not exist without the work of many great people!
+
+* The code to create the project folder is based on the [template package by Francisco Rodriguez-Sanchez](https://github.com/Pakillo/template) (and references therein)
+* The 00_start script is inspired by the [`{golem}` package](https://thinkr-open.github.io/golem/)
+* Rstudio for the development of Rmarkdown and all the great things that come with it (knitting, templates, themes, ...)

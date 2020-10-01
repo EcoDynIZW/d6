@@ -117,12 +117,6 @@ Rstudio, navigate to `File > New File > RMarkdown... > Templates` and
 choose the template you want to use. All templates come with a
 preformatted YAML header and chunks for the setup.
 
-<<<<<<< Updated upstream
-The following templates are available:
-
-
-Based on the [template package by Francisco Rodriguez-Sanchez](https://github.com/Pakillo/template)
-=======
 The following templates are available for now:
 
   - *EcoDynIZW Basic*: Template for a basic Rmarkdown research report
@@ -149,4 +143,18 @@ You can also render single Rmarkdown documents via `render_report()`:
 ``` r
 d6::render_all_reports()
 ```
->>>>>>> Stashed changes
+
+-----
+
+### Acknowledgements
+
+This package would not exist without the work of many great people\!
+
+  - The code to create the project folder is based on the [template
+    package by Francisco
+    Rodriguez-Sanchez](https://github.com/Pakillo/template) (and
+    references therein)
+  - The 00\_start script is inspired by the [`{golem}`
+    package](https://thinkr-open.github.io/golem/)
+  - Rstudio for the development of Rmarkdown and all the great things
+    that come with it (knitting, templates, themes, …)
