@@ -1,12 +1,28 @@
 
 # `d6` Package <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
 
-### Generic Templates for D6 Research Projects
+### Simplify Project Workflows in D6 Research Projects
 
-This package works as a template for new research projects, under the
-idea of having everything (data, R scripts, functions and
-manuscript/reports) contained in the same package (a ‘research
-compendium’) to facilitate collaboration and promote reproducibility.
+-----
+
+## Aim
+
+> The package aims to simplify the project workflow within the
+> department “Ecologcial Dynamics” at the Leibniz Institute for Zoo and
+> Wildlife Research by providing a standardized folder structure,
+> templates for reports and utility functions.
+
+There are three main functionalities:
+
+1.  [Create project directiories with `new_project()`](#folders)
+2.  [Install a set of common packages with
+    `install_d6_packages()`](#packages)
+3.  [Provide custom Rmarkdown templates via `File > New File >
+    Rmarkdown... > From Template`](#templates)
+4.  [Render all Rmarkdown documents to the ./docs/report directory with
+    `render_all_reports()`](#render)
+
+# 
 
 ## Installation
 
@@ -19,14 +35,7 @@ install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
 ```
 
-There are three main functionalities:
-
-1.  Create project directiories with `new_project()`
-2.  Install a set of common packages with `install_d6_packages()`
-3.  Provide custom Rmarkdown templates via `File > New File >
-    Rmarkdown... > From Template`
-4.  Render all Rmarkdown documents to the ./docs/report directory with
-    `render_all_reports()`
+# 
 
 ## Create Project Directory
 
@@ -93,6 +102,8 @@ After you have set up your project directory, open the file `00_start.R`
 in the `R` folder. Add the details of your project, fill in the readme,
 add a MIT license (if needed) and add package dependencies.
 
+# 
+
 ## Install Common Packages
 
 You can install the packages that are most commonly used in our
@@ -110,6 +121,8 @@ are not intending to process geodata, set `geo` to `FALSE`:
 d6::install_d6_packages(geo = FALSE)
 ```
 
+# 
+
 ## Use Custom Rmarkdown Templates
 
 The package also provides several templates for your scripts. In
@@ -123,6 +136,8 @@ The following templates are available for now:
     (mostly empty)
   - *EcoDynIZW Data*: Template for a Rmarkdown research report for data
     import and cleaning
+
+# 
 
 ## Render Rmarkdown Files to Reports
 
