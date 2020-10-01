@@ -1,12 +1,9 @@
 Package: d6
-Title: Template for D6 research projects
+Title: Simplify Workflows of D6 Research Projects
 Version: 0.1.0.0
-Date: 2020-09-16
+Date: 2020-10-01
 Authors@R: "Cedric Scherer <cedricphilippscherer@gmail.com> [aut, cre]"
-Description: This package works as a template for new research
-    projects, under the idea of having everything (data, R scripts, functions
-    and manuscript/reports) contained in the same package (a 'research compendium')
-    to facilitate collaboration and promote reproducibility.
+Description: The goal of the {d6} package is to simplify the project workflow within the department “Ecologcial Dynamics” at the Leibniz Institute for Zoo and Wildlife Research by providing a standardized folder structure, templates for reports and utility functions.
 Depends:
     R (>= 3.1.1)
 License: CC0
