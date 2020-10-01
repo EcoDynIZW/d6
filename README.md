@@ -8,7 +8,7 @@
 > for Zoo and Wildlife Research by providing a standardized folder
 > structure, templates for reports and utility functions.
 
-There are three main functionalities:
+There are four main functionalities:
 
 1.  [Create standardized project directories with
     `new_project()`](#create-project-directory)
