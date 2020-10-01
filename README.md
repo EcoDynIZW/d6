@@ -55,7 +55,7 @@ To start a new project in the current working directory, simply run:
 d6::new_project("project")
 ```
 
-<br>
+-----
 
 #### Use A Custom Root Directory
 
@@ -73,7 +73,7 @@ d6::new_project("project", path = "absolute/path/to/the/root/folder/")
 The resulting final directory of your project would be
 `absolute/path/to/the/root/folder/project`.
 
-<br>
+# 
 
 #### Use Version Control
 
@@ -95,7 +95,7 @@ Note that to create a GitHub repo you will need to have configured your
 system as explained
 [here](http://www.rdocumentation.org/packages/devtools/functions/use_github).
 
-<br>
+# 
 
 #### Setup without Geo Directories
 
@@ -107,7 +107,7 @@ setting `geo` to `FALSE`:
 d6::new_project("project", geo = FALSE)
 ```
 
-<br>
+# 
 
 #### Add Documentation to Your Project
 
