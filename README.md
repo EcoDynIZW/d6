@@ -1,7 +1,7 @@
 
 # `d6` Package <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
 
-### Simplify Project Workflows in D6 Research Projects
+### Simplify Workflows of D6 Research Projects
 
 -----
 
