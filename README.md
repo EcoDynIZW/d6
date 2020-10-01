@@ -10,13 +10,14 @@
 
 There are three main functionalities:
 
-1.  [Create project directiories with `new_project()`](#folders)
+1.  [Create project directiories with
+    `new_project()`](#create-project-directory)
 2.  [Install a set of common packages with
-    `install_d6_packages()`](#packages)
+    `install_d6_packages()`](#install-common-packages)
 3.  [Provide custom Rmarkdown templates via `File > New File >
-    Rmarkdown... > From Template`](#templates)
+    Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
 4.  [Render all Rmarkdown documents to ./docs/report with
-    `render_all_reports()`](#render)
+    `render_all_reports()`](#render-rmarkdown-files-to-reports)
 
 # 
 
@@ -161,7 +162,7 @@ d6::render_all_reports()
 
 -----
 
-### Acknowledgements
+#### Acknowledgements
 
 This package would not exist without the work of many great people\!
 
@@ -173,3 +174,13 @@ This package would not exist without the work of many great people\!
     package](https://thinkr-open.github.io/golem/)
   - Rstudio for the development of Rmarkdown and all the great things
     that come with it (knitting, templates, themes, …)
+
+# 
+
+#### Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
+<div style="width:300px; height:200px">
+
+<img src=https://camo.githubusercontent.com/00f7814990f36f84c5ea74cba887385d8a2f36be/68747470733a2f2f646f63732e636c6f7564706f7373652e636f6d2f696d616765732f63632d62792d6e632d73612e706e67 alt="" height="42">
+
+</div>

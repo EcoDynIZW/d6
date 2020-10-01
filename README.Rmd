@@ -12,10 +12,10 @@ output: github_document
 
 There are three main functionalities:
 
-1. [Create project directiories with `new_project()`](#folders)
-1. [Install a set of common packages with `install_d6_packages()`](#packages)
-1. [Provide custom Rmarkdown templates via `File > New File > Rmarkdown... > From Template`](#templates)
-1. [Render all Rmarkdown documents to ./docs/report with `render_all_reports()`](#render)
+1. [Create project directiories with `new_project()`](#create-project-directory)
+1. [Install a set of common packages with `install_d6_packages()`](#install-common-packages)
+1. [Provide custom Rmarkdown templates via `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
+1. [Render all Rmarkdown documents to ./docs/report with `render_all_reports()`](#render-rmarkdown-files-to-reports)
 
 #
 
@@ -30,7 +30,7 @@ devtools::install_github("EcoDynIZW/d6")
 
 #
 
-## Create Project Directory {#folders}
+## Create Project Directory
 
 Run the function `new_project` to create a new project. This will create a directory with all the scaffolding we use for all projects in our department. It also add several files needed for documentation of your project.
 
@@ -84,7 +84,7 @@ After you have set up your project directory, open the file `00_start.R` in the 
 
 #
 
-## Install Common Packages {#packages}
+## Install Common Packages
 
 You can install the packages that are most commonly used in our department via `install_d6_packages()`:
 
@@ -102,7 +102,7 @@ d6::install_d6_packages(geo = FALSE)
 
 #
 
-## Use Custom Rmarkdown Templates {#templates}
+## Use Custom Rmarkdown Templates
 
 The package also provides several templates for your scripts. In Rstudio, navigate to `File > New File > RMarkdown... > Templates` and choose the template you want to use. All templates come with a preformatted YAML header and chunks for the setup.
 
@@ -113,7 +113,7 @@ The following templates are available for now:
 
 #
 
-## Render Rmarkdown Files to Reports {#render}
+## Render Rmarkdown Files to Reports
 
 The `render_*()` functions take care of knitting your Rmarkdown files into HTML reports. The functions assume that your .Rmd files are saved in the `R`  directory or any subdirectory, and will store the resulting .html files in the according directory, namely `./docs/reports/`.
 
@@ -129,12 +129,19 @@ You can also render single Rmarkdown documents via `render_report()`:
 d6::render_all_reports()
 ```
 
----
+***
 
-### Acknowledgements
+#### Acknowledgements
 
 This package would not exist without the work of many great people!
 
 * The code to create the project folder is based on the [template package by Francisco Rodriguez-Sanchez](https://github.com/Pakillo/template) (and references therein)
 * The 00_start script is inspired by the [`{golem}` package](https://thinkr-open.github.io/golem/)
 * Rstudio for the development of Rmarkdown and all the great things that come with it (knitting, templates, themes, ...)
+
+#
+
+#### Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+<div style="width:300px; height:200px">
+<img src=https://camo.githubusercontent.com/00f7814990f36f84c5ea74cba887385d8a2f36be/68747470733a2f2f646f63732e636c6f7564706f7373652e636f6d2f696d616765732f63632d62792d6e632d73612e706e67 alt="" height="42">
+</div>
