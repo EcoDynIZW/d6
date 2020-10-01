@@ -157,7 +157,8 @@ d6::render_all_reports()
 You can also render single Rmarkdown documents via `render_report()`:
 
 ``` r
-d6::render_all_reports()
+d6::render_report("my-report.Rmd")
+d6::render_report("notsurewhybutIhaveasubfolder/my-report.Rmd")
 ```
 
 <br>
