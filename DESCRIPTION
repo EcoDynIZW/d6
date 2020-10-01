@@ -19,7 +19,8 @@ Imports:
     usethis,
     cli,
     desc,
-    here
+    here,
+    rmarkdown
 Suggests:
     rmdTemplates,
     testthat
