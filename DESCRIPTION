@@ -14,7 +14,12 @@ LazyData: true
 URL: https://github.com/EcoDynIZW/d6proj
 BugReports: https://github.com/EcoDynIZW/d6proj/issues
 Imports:
-    devtools
+    devtools,
+    fs,
+    usethis,
+    cli,
+    desc,
+    here
 Suggests:
     rmdTemplates,
     testthat
