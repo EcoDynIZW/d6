@@ -11,8 +11,8 @@
 #' @importFrom desc description
 #' @importFrom cli cat_bullet
 #' @importFrom fs path path_abs
-#' #' @importFrom here here
-#' @export
+#' @importFrom here here
+#' 
 if_not_null <- function(x, ...){
   if (! is.null(x)){
     force(...)
