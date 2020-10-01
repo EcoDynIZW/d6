@@ -1,0 +1,47 @@
+---
+title: "Your Project"     ## name of your project
+author: "Your Name"       ## your name(s)
+date: "`r Sys.Date()`"    ## current date
+output:
+  html_document:
+    theme: journal        ## choose theme
+    highlight: kate       ## choose code style
+    code_folding: hide    ## hide or show code by default?
+    toc: true             ## add Table of Contents
+    toc_depth: 3          ## 3-level TOC
+    toc_float: true       ## TOC in sidebar
+    code_download: true   ## allow download of source code
+---
+
+```{r setup, include=FALSE}
+## You can ignore this chunk in most cases
+## If you want to modify chunk options, you can do it here for all chunks or
+## add the options in the repsective chunk header, e.g. `{r, message = FALSE}`
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = TRUE,
+                      fig.width = 9, fig.height = 6, dpi = 500, 
+                      retina = 1, fig.showtext = TRUE)
+```
+
+
+# Setup
+
+```{r packages}
+## for non-CRAN packages please keep install instruction
+## but commented so it is not run each time, e.g.
+# devtools::install_github("EcoDynIZW/template")
+
+## libraries used in this script
+## please add ALL LIBRARIES NEEDED HERE
+## please remove libraries from the list that are not needed anymore 
+## at a later stage
+library()
+```
+
+
+# Data
+
+```{r data}
+
+```
+
+

@@ -1,4 +1,0 @@
-name: EcoDynIZW Data Import PDF
-description: >
-   Template for a prepared Rmarkdown script for data import, knitted to PDF
-create_dir: FALSE
