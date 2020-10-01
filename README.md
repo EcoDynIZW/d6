@@ -109,6 +109,10 @@ department via `install_d6_packages()`:
 d6::install_d6_packages()
 ```
 
+Note that this function is going to check preinstalled versions and will
+only install packages that are not installed with your current R
+version.
+
 Again, there is an arguement `geo` so you can decide if you want to
 install common geodata packages as well (which is the default). If you
 are not intending to process geodata, set `geo` to `FALSE`:
