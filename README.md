@@ -1,12 +1,12 @@
 
-## `d6` Package: <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a><br>Simplify Workflows of D6 Research Projects
+# `d6`<img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
 
-## Aim
+### Simplify Workflows of D6 Research Projects
 
-> The package aims to simplify the project workflow within the
-> department “Ecologcial Dynamics” at the Leibniz Institute for Zoo and
-> Wildlife Research by providing a standardized folder structure,
-> templates for reports and utility functions.
+> The goal of the `d6` package is to simplify the project workflow
+> within the department “Ecologcial Dynamics” at the Leibniz Institute
+> for Zoo and Wildlife Research by providing a standardized folder
+> structure, templates for reports and utility functions.
 
 There are three main functionalities:
 
