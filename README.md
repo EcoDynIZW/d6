@@ -17,7 +17,8 @@ There are four main functionalities:
 3.  [Provide custom Rmarkdown templates via `File > New File >
     Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
 4.  [Render all Rmarkdown documents to ./docs/report with
-    `render_all_reports()`](#render-rmarkdown-files-to-reports)
+    `render_all_reports()` or
+    `render_report()`](#render-rmarkdown-files-to-reports)
 
 <br>
 

@@ -15,7 +15,7 @@ There are four main functionalities:
 1. [Create standardized project directories with `new_project()`](#create-project-directory)
 1. [Install a set of common packages with `install_d6_packages()`](#install-common-packages)
 1. [Provide custom Rmarkdown templates via `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
-1. [Render all Rmarkdown documents to ./docs/report with `render_all_reports()`](#render-rmarkdown-files-to-reports)
+1. [Render all Rmarkdown documents to ./docs/report with `render_all_reports()` or `render_report()`](#render-rmarkdown-files-to-reports)
 
 <br>
 
