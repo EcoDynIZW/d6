@@ -1,9 +1,9 @@
 
-# `d6`<img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
+# d6 <img src='man/figures/hexlogo_pure.png' align="right" height="151.5" /></a>
 
 ### Simplify Workflows of D6 Research Projects
 
-> The goal of the `d6` package is to simplify the project workflow
+> The goal of the `{d6}` package is to simplify the project workflow
 > within the department “Ecologcial Dynamics” at the Leibniz Institute
 > for Zoo and Wildlife Research by providing a standardized folder
 > structure, templates for reports and utility functions.
