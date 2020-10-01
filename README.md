@@ -56,7 +56,7 @@ To start a new project in the current working directory, simply run:
 d6::new_project("project")
 ```
 
------
+# 
 
 #### Use A Custom Root Directory
 
