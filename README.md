@@ -19,6 +19,15 @@ install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
 ```
 
+There are three main functionalities:
+
+1.  Create project directiories with `new_project()`
+2.  Install a set of common packages with `install_d6_packages()`
+3.  Provide custom Rmarkdown templates via `File > New File >
+    Rmarkdown... > From Template`
+4.  Render all Rmarkdown documents to the ./docs/report directory with
+    `render_all_reports()`
+
 ## Create Project Directory
 
 Run the function `new_project` to create a new project. This will create
@@ -78,19 +87,66 @@ setting `geo` to `FALSE`:
 d6::new_project("project", geo = FALSE)
 ```
 
-## Add Documentation to Your Project
+#### Add Documentation to Your Project
 
 After you have set up your project directory, open the file `00_start.R`
 in the `R` folder. Add the details of your project, fill in the readme,
 add a MIT license (if needed) and add package dependencies.
 
-## Use Script Templates
+## Install Common Packages
+
+You can install the packages that are most commonly used in our
+department via `install_d6_packages()`:
+
+``` r
+d6::install_d6_packages()
+```
+
+Again, there is an arguement `geo` so you can decide if you want to
+install common geodata packages as well (which is the default). If you
+are not intending to process geodata, set `geo` to `FALSE`:
+
+``` r
+d6::install_d6_packages(geo = FALSE)
+```
+
+## Use Custom Rmarkdown Templates
 
 The package also provides several templates for your scripts. In
 Rstudio, navigate to `File > New File > RMarkdown... > Templates` and
-choose the template you want to use.
+choose the template you want to use. All templates come with a
+preformatted YAML header and chunks for the setup.
 
+<<<<<<< Updated upstream
 The following templates are available:
 
 
 Based on the [template package by Francisco Rodriguez-Sanchez](https://github.com/Pakillo/template)
+=======
+The following templates are available for now:
+
+  - *EcoDynIZW Basic*: Template for a basic Rmarkdown research report
+    (mostly empty)
+  - *EcoDynIZW Data*: Template for a Rmarkdown research report for data
+    import and cleaning
+
+## Render Rmarkdown Files to Reports
+
+The `render_*()` functions take care of knitting your Rmarkdown files
+into HTML reports. The functions assume that your .Rmd files are saved
+in the `R` directory or any subdirectory, and will store the resulting
+.html files in the according directory, namely `./docs/reports/`.
+
+You can render all .Rmd files that are placed in the `R` directory and
+subdirectories in one step:
+
+``` r
+d6::render_all_reports()
+```
+
+You can also render single Rmarkdown documents via `render_report()`:
+
+``` r
+d6::render_all_reports()
+```
+>>>>>>> Stashed changes
