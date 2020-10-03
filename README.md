@@ -56,6 +56,47 @@ To start a new project in the current working directory, simply run:
 d6::new_project("project")
 ```
 
+The directories created in the root folder (here `project`) is the
+following:
+
+``` r
+.
+└── project
+    ├── data-raw
+    ├── docs
+    ├── output
+    ├── plots
+    └── R
+```
+
+The full scaffolding structure including all subdirectories and
+addiitonal files looksl like this:
+
+``` r
+.
+└── project
+    ├── data-raw
+    │   └── geo-raw
+    ├── docs
+    │   ├── admin
+    │   ├── literature
+    │   ├── manuscript
+    │   ├── presentations
+    │   └── reports
+    ├── output
+    │   ├── data-proc
+    │   └── geo-proc
+    ├── plots
+    ├── R
+    │   ├── 00_start.R
+    │   └── XX_submit.R
+    ├── .gitignore
+    ├── .Rbuildignore
+    ├── DESCRIPTION
+    ├── NAMESPACE
+    └── project.Rproj
+```
+
 # 
 
 #### Use A Custom Root Directory
