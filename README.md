@@ -59,7 +59,7 @@ d6::new_project("project")
 The directories created in the root folder (here `project`) is the
 following:
 
-``` r
+``` text
 .
 └── project
     ├── data-raw
@@ -72,7 +72,7 @@ following:
 The full scaffolding structure including all subdirectories and
 addiitonal files looksl like this:
 
-``` r
+``` text
 .
 └── project
     ├── data-raw
