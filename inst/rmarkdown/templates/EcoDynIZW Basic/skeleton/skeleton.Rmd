@@ -1,16 +1,12 @@
 ---
-title: "Your Project"     ## name of your project
-author: "Your Name"       ## your name(s)
-date: "`r Sys.Date()`"    ## current date
+title: "Your Project: Data Preparation" ## name of your project
+author: "Your Name"                     ## your name(s)
+date: "`r Sys.Date()`"                  ## current date
 output:
-  html_document:
-    theme: journal        ## choose theme
-    highlight: kate       ## choose code style
-    code_folding: hide    ## hide or show code by default?
-    toc: true             ## add Table of Contents
-    toc_depth: 3          ## 3-level TOC
-    toc_float: true       ## TOC in sidebar
-    code_download: true   ## allow download of source code
+  rmdformats::readthedown:
+    highlight: kate                     ## choose code style
+    code_folding: hide                  ## hide or show code by default?
+    toc_depth: 3                        ## 3-level TOC
 ---
 
 ```{r setup, include=FALSE}
@@ -21,6 +17,10 @@ knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = TRUE,
                       fig.width = 9, fig.height = 6, dpi = 500, 
                       retina = 1, fig.showtext = TRUE)
 ```
+
+* **Research question:**
+* **Study area:**
+* **Data:** 
 
 
 # Setup
@@ -41,7 +41,8 @@ library()
 # Data
 
 ```{r data}
-
+#df <- readr::read_csv("your-data.csv")
+#sf <- sf::read_sf("your-geo-data.shp")
 ```
 
 
@@ -54,7 +55,7 @@ library()
 ## We store the settings of your computer and the current versions of the
 ## packages used to allow for reproducibility
 Sys.time()
-git2r::repository()
+#git2r::repository() ## uncomment if you are using GitHub
 sessionInfo()
 ```
 
