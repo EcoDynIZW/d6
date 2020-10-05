@@ -4,7 +4,6 @@ author: "Your Name"                     ## your name(s)
 date: "`r Sys.Date()`"                  ## current date
 output:
   rmdformats::readthedown:
-    highlight: kate                     ## choose code style
     code_folding: hide                  ## hide or show code by default?
     toc_depth: 3                        ## 3-level TOC
 ---
