@@ -72,7 +72,7 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   
   ## add GitHub
   if (github){
-    usethis::use_github(pkg = name, private = private_repo)
+    usethis::use_github(private = private_repo)
     usethis::use_github_links(name)
   }
 
