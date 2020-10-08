@@ -33,6 +33,8 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   ## create dir
   devtools::create(path_full)
   
+  usethis::proj_set(path_full)
+  
   cat_green_tick("Created project directory")
   
   ## create directories
@@ -55,11 +57,6 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   
   cat_green_tick("Created directories")
   
-  ## add Readmne.md
-  setwd(path_full)
-  
-  cat_green_tick("Added project descriptions")
-  
   ## add scripts
   file.copy(
     system.file("00_start.R", package = "d6"),
@@ -70,10 +67,12 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
     file.path(path_full, "R")
   )
   
+  cat_green_tick("Added helper scripts")
+  
   ## add GitHub
   if (github){
+    usethis::use_git()
     usethis::use_github(private = private_repo)
-    usethis::use_github_links(name)
   }
 
   cat_green_tick("DONE")
