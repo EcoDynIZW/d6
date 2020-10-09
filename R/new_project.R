@@ -1,6 +1,6 @@
 #' Create new project scaffolding.
 #'
-#' Create all the scaffolding for a new project in a new directory. The scaffolding includes a \code{DESCRIPTION} and \code{NAMESPACE} file, \code{.gitignore}, different folders to hold raw data, outputs, documents, figures, and scripts, as well as \code{RProject} infrastructure. Also, optionally, set a GitHub repo and .
+#' Create all the scaffolding for a new project in a new directory. The scaffolding includes a \code{DESCRIPTION} and \code{NAMESPACE} file, \code{.gitignore}, different folders to hold raw data, outputs, documents, figures, and scripts, as well as \code{RProject} infrastructure. Also, optionally, set a GitHub repo and exclude geo data directories.
 #'
 #' @param name Name of the new project. A new folder will be created with that name.
 #' @param path Path of the new project where the folder is created. If empty then the current working directory is used.

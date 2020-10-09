@@ -4,20 +4,22 @@
 \alias{new_project}
 \title{Create new project scaffolding.}
 \usage{
-new_project(name, path = getwd(), github = FALSE, private.repo = TRUE)
+new_project(name, path = getwd(), github = FALSE, private.repo = TRUE, geo = TRUE)
 }
 \arguments{
 \item{name}{Name of the new project. A new folder will be created with that name.}
 
-\item{path}{path of the new project where the folder is created. If empty then the current working directory is used.}
+\item{path}{Path of the new project where the folder is created. If empty then the current working directory is used.}
 
-\item{github}{Logical. Create GitHub repo? Note this requires a \code{GITHUB_PAT}. See \code{\link[devtools]{use_github}}.}
+\item{github}{Logical. Create GitHub repo? Note this requires a \code{GITHUB_PAT}. See \code{\link[set up routine here]{https://gist.github.com/Z3tt/3dab3535007acf108391649766409421}}.}
 
-\item{private.repo}{Logical. Default is TRUE.}
+\item{private_repo}{Logical. Should the repo be private or public? Default is \code{TRUE} which equals to private.}
+}
+\item{geo}{Logical. Create directories for spatial data? Default is \code{TRUE}.}
 }
 \value{
 A new directory with R package structure, slightly modified.
 }
 \description{
-Create all the scaffolding for a new project in a new directory. The scaffolding includes a \code{README.Rmd} file, different folders to hold raw data, analyses, etc, and \code{testthat} infrastructure. Also, optionally, set a GitHub repo and add Travis-CI.
+Create all the scaffolding for a new project in a new directory. The scaffolding includes a \code{DESCRIPTION} and \code{NAMESPACE} file, \code{.gitignore}, different folders to hold raw data, outputs, documents, figures, and scripts, as well as \code{RProject} infrastructure. Also, optionally, set a GitHub repo and exclude geo data directories.
 }
