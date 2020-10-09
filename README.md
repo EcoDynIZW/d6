@@ -135,7 +135,7 @@ d6::new_project("project", github = TRUE, private_repo = FALSE)
 
 Note that to create a GitHub repo you will need to have configured your
 system as explained
-[here](http://www.rdocumentation.org/packages/devtools/functions/use_github).
+[here](https://gist.github.com/Z3tt/3dab3535007acf108391649766409421).
 
 # 
 
