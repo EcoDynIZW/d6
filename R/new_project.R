@@ -4,7 +4,7 @@
 #'
 #' @param name Name of the new project. A new folder will be created with that name.
 #' @param path Path of the new project where the folder is created. If empty then the current working directory is used.
-#' @param github Logical. Create GitHub repo? Note this requires a \code{GITHUB_PAT}. See \code{\link[set up routine here]{https://gist.github.com/Z3tt/3dab3535007acf108391649766409421}}.
+#' @param github Logical. Create GitHub repo? Note this requires a \code{GITHUB_PAT}. See instructions here \url{https://gist.github.com/Z3tt/3dab3535007acf108391649766409421}.
 #' @param private_repo Logical. Should the repo be private or public? Default is \code{TRUE} which equals to private.
 #' @param geo Logical. Create directories for spatial data? Default is \code{TRUE}.
 #'
