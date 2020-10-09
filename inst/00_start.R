@@ -21,4 +21,3 @@ usethis::use_mit_license( name = "Your Name" )
 
 ## Add one line by package you want to add as dependency
 usethis::use_package("tidyverse")
-
