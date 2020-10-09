@@ -14,7 +14,7 @@ new_project(name, path = getwd(), github = FALSE, private.repo = TRUE, geo = TRU
 \item{github}{Logical. Create GitHub repo? Note this requires a \code{GITHUB_PAT}. See \code{\link[set up routine here]{https://gist.github.com/Z3tt/3dab3535007acf108391649766409421}}.}
 
 \item{private_repo}{Logical. Should the repo be private or public? Default is \code{TRUE} which equals to private.}
-}
+
 \item{geo}{Logical. Create directories for spatial data? Default is \code{TRUE}.}
 }
 \value{
