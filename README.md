@@ -76,7 +76,7 @@ addiitonal files looks like this:
 . 
 └── project 
     ├── .Rproj.user         —  Rproject files
-    ├── data-raw            —  raw data (in root tabular data)
+    ├── data-raw            —  raw data (tabular data in root folder)
     │    └── geo-raw        —  raw spatial data
     ├── docs                —  documents
     │   ├── admin           —  adminstrative docs, e.g. permits 
