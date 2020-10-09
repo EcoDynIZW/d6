@@ -8,7 +8,7 @@
 #' @param private_repo Logical. Should the repo be private or public? Default is \code{TRUE} which equals to private.
 #' @param geo Logical. Create directories for spatial data? Default is \code{TRUE}.
 #'
-#' @return A new directory with R package structure, slightly modified.
+#' @return A new directory with a project structure based on the common package structure, slightly modified. Also includes scripts for start and end of each project.
 #' @export
 #' @import fs devtools usethis
 #' @importFrom cli cat_bullet 
