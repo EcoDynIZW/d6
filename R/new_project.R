@@ -83,7 +83,7 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
       name, 
       " was created at ", 
       fs::path_abs(path),
-      " .\n\n", 
+      ".\n\n", 
       "To continue working on your project, start editing the 01_start.R file in the new Rstudio session."
     )
   )
