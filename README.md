@@ -73,28 +73,29 @@ The full scaffolding structure including all subdirectories and
 addiitonal files looksl like this:
 
 ``` text
-.
-└── project
-    ├── data-raw
-    │   └── geo-raw
-    ├── docs
-    │   ├── admin
-    │   ├── literature
-    │   ├── manuscript
-    │   ├── presentations
-    │   └── reports
-    ├── output
-    │   ├── data-proc
-    │   └── geo-proc
-    ├── plots
-    ├── R
-    │   ├── 00_start.R
-    │   └── XX_submit.R
-    ├── .gitignore
-    ├── .Rbuildignore
-    ├── DESCRIPTION
-    ├── NAMESPACE
-    └── project.Rproj
+. 
+└── project 
+    ├── .Rproj.user         —  Rproject files
+    ├── data-raw            —  raw data (in root tabular data)
+    │    └── geo-raw        —  raw spatial data
+    ├── docs                —  documents
+    │   ├── admin           —  adminstrative docs, e.g. permits 
+    │   ├── literature      —  literature used for parameterization + ms
+    │   ├── manuscript      —  manuscript drafts (main + supplement)
+    │   ├── presentations   —  talks and poster presentations
+    │   └── reports         —  rendered reports
+    ├── output              —  everything that is computed (except plots)
+    │   ├── data-proc       —  processed tabular data
+    │   └── geo-proc        —  processed spatial data
+    ├── plots               —  plot output
+    ├── R                   —  scripts
+    │   ├── 00_start.R      —  first script to run
+    │   └── XX_submit.R     —  final script to run
+    ├── .gitignore          —  contains which files to ignore for version control
+    ├── .Rbuildignore       —  contains which files to ignore for package builds
+    ├── DESCRIPTION         —  contains project details and package dependencies
+    ├── NAMESPACE           —  contains context for R objects
+    └── project.Rproj       —  Rproject file: use to start your project
 ```
 
 # 
