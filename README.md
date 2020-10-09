@@ -70,7 +70,7 @@ following:
 ```
 
 The full scaffolding structure including all subdirectories and
-addiitonal files looksl like this:
+addiitonal files looks like this:
 
 ``` text
 . 
