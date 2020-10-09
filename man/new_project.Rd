@@ -11,7 +11,7 @@ new_project(name, path = getwd(), github = FALSE, private.repo = TRUE, geo = TRU
 
 \item{path}{Path of the new project where the folder is created. If empty then the current working directory is used.}
 
-\item{github}{Logical. Create GitHub repo? Note this requires a \code{GITHUB_PAT}. See instructions \href{URL}{https://gist.github.com/Z3tt/3dab3535007acf108391649766409421}{here}.}
+\item{github}{Logical. Create GitHub repo? Note this requires a \code{GITHUB_PAT}. See instructions \href{https://gist.github.com/Z3tt/3dab3535007acf108391649766409421}{here}.}
 
 \item{private_repo}{Logical. Should the repo be private or public? Default is \code{TRUE} which equals to private.}
 
