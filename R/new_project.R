@@ -31,7 +31,7 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   }
   
   ## create dir
-  devtools::create(path_full)
+  devtools::create(path_full, check_name = FALSE)
   
   usethis::proj_set(path_full)
   
