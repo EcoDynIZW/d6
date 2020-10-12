@@ -1,4 +1,4 @@
-#' Render Rmd placed in ./R to html in ./docs/reports
+#' Render an Rmd file placed in ./R to html in ./docs/reports
 #'
 #' @param rmd A string. Name of the Rmd file
 #' @importFrom here here
@@ -11,11 +11,15 @@ render_report <- function(rmd) {
     paste0("R/", rmd), 
     output_file = here::here(
       "docs", "reports", 
-      paste0(gsub(".Rmd|.rmd|.RMD", out, ""), ".html")
+      paste0(gsub(".Rmd|.rmd|.RMD", "", out), ".html")
     )
   )
 }
-
+#' Render All Rmd files placed in ./R to html in ./docs/reports
+#'
+#' @importFrom here here
+#' @importFrom rmarkdown render
+#' 
 render_all_reports <- function() {
   rmds <- list.files(here::here("R"), pattern = "*.rmd|*.Rmd|*.RMD", recursive = TRUE, include.dirs = TRUE)
   out <- gsub(".*/", "", rmds)
