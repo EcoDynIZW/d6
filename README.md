@@ -53,15 +53,15 @@ documentation of your project.
 To start a new project in the current working directory, simply run:
 
 ``` r
-d6::new_project("project")
+d6::new_project("2020_smith_unicornIBM")
 ```
 
-The directories created in the root folder (here `project`) is the
+The directories created in the root folder (here `2020_smith_unicornIBM`) is the
 following:
 
 ``` text
 .
-└── project
+└── 2020_smith_unicornIBM
     ├── data-raw
     ├── docs
     ├── output
@@ -74,7 +74,7 @@ addiitonal files looks like this:
 
 ``` text
 . 
-└── project 
+└── 2020_smith_unicornIBM 
     ├── .Rproj.user         —  Rproject files
     ├── data-raw            —  raw data (tabular data in root folder)
     │    └── geo-raw        —  raw spatial data
@@ -108,13 +108,13 @@ is created:
 
 ``` r
 ## both work:
-d6::new_project("project", path = "absolute/path/to/the/root/folder")
+d6::new_project("2020_smith_unicornIBM", path = "absolute/path/to/the/root/folder")
 ## or:
-d6::new_project("project", path = "absolute/path/to/the/root/folder/")
+d6::new_project("2020_smith_unicornIBM", path = "absolute/path/to/the/root/folder/")
 ```
 
 The resulting final directory of your project would be
-`absolute/path/to/the/root/folder/project`.
+`absolute/path/to/the/root/folder/2020_smith_unicornIBM`.
 
 # 
 
@@ -124,14 +124,14 @@ If you want to create a GitHub repository for the project at the same
 time, use instead:
 
 ``` r
-d6::new_project("project", github = TRUE)
+d6::new_project("2020_smith_unicornIBM", github = TRUE)
 ```
 
 By default, the visibility of the GitHub repository is set to “private”
 but you can also change that:
 
 ``` r
-d6::new_project("project", github = TRUE, private_repo = FALSE)
+d6::new_project("2020_smith_unicornIBM", github = TRUE, private_repo = FALSE)
 ```
 
 Note that to create a GitHub repo you will need to have configured your
@@ -147,7 +147,7 @@ prevent the creation of the directories `geo-raw` and `geo-proc` by
 setting `geo` to `FALSE`:
 
 ``` r
-d6::new_project("project", geo = FALSE)
+d6::new_project("2020_smith_unicornIBM", geo = FALSE)
 ```
 
 # 
