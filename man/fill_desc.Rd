@@ -5,6 +5,7 @@
 \title{Fill your description}
 \usage{
 fill_desc(
+  pkg_title,
   pkg_description,
   author_first_name,
   author_last_name,
@@ -14,6 +15,8 @@ fill_desc(
 )
 }
 \arguments{
+\item{pkg_title}{Full title of the package}
+
 \item{pkg_description}{Description of the package}
 
 \item{author_first_name}{First Name of the author}

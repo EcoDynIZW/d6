@@ -1,3 +1,13 @@
+#' Check for NULL values
+#'
+#' @param x Value to check.
+#' 
+if_not_null <- function(x, ...){
+  if (! is.null(x)){
+    force(...)
+  }
+}
+
 #' Fill your description
 #'
 #' @param pkg_title Full title of the package
@@ -12,12 +22,6 @@
 #' @importFrom fs path path_abs
 #' @importFrom here here
 #' 
-if_not_null <- function(x, ...){
-  if (! is.null(x)){
-    force(...)
-  }
-}
-
 fill_desc <- function(
   pkg_title,
   pkg_description,
