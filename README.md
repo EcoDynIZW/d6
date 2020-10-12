@@ -56,8 +56,11 @@ To start a new project in the current working directory, simply run:
 d6::new_project("smith_2020_unicornIBM")
 ```
 
-The directories created in the root folder (here
-`smith_2020_unicornIBM`) is the following:
+*Please give your project a unique and descriptive name:
+**lastname\_year\_project***
+
+The main folders created in the root folder (here
+`smith_2020_unicornIBM`) are the following:
 
 ``` text
 .
