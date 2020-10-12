@@ -45,23 +45,23 @@ devtools::install_github("EcoDynIZW/d6")
 
 ## Create Project Directory
 
-Run the function `new_project` to create a new project. This will create
-a standardized directory with all the scaffolding we use for all
+Run the function `new_project()` to create a new project. This will
+create a standardized directory with all the scaffolding we use for all
 projects in our department. It also add several files needed for
 documentation of your project.
 
 To start a new project in the current working directory, simply run:
 
 ``` r
-d6::new_project("2020_smith_unicornIBM")
+d6::new_project("smith_2020_unicornIBM")
 ```
 
-The directories created in the root folder (here `2020_smith_unicornIBM`) is the
-following:
+The directories created in the root folder (here
+`smith_2020_unicornIBM`) is the following:
 
 ``` text
 .
-└── 2020_smith_unicornIBM
+└── smith_2020_unicornIBM
     ├── data-raw
     ├── docs
     ├── output
@@ -74,7 +74,7 @@ addiitonal files looks like this:
 
 ``` text
 . 
-└── 2020_smith_unicornIBM 
+└── smith_2020_unicornIBM 
     ├── .Rproj.user         —  Rproject files
     ├── data-raw            —  raw data (tabular data in root folder)
     │    └── geo-raw        —  raw spatial data
@@ -108,13 +108,13 @@ is created:
 
 ``` r
 ## both work:
-d6::new_project("2020_smith_unicornIBM", path = "absolute/path/to/the/root/folder")
+d6::new_project("smith_2020_unicornIBM", path = "absolute/path/to/the/root/folder")
 ## or:
-d6::new_project("2020_smith_unicornIBM", path = "absolute/path/to/the/root/folder/")
+d6::new_project("smith_2020_unicornIBM", path = "absolute/path/to/the/root/folder/")
 ```
 
 The resulting final directory of your project would be
-`absolute/path/to/the/root/folder/2020_smith_unicornIBM`.
+`absolute/path/to/the/root/folder/smith_2020_unicornIBM`.
 
 # 
 
@@ -124,14 +124,14 @@ If you want to create a GitHub repository for the project at the same
 time, use instead:
 
 ``` r
-d6::new_project("2020_smith_unicornIBM", github = TRUE)
+d6::new_project("smith_2020_unicornIBM", github = TRUE)
 ```
 
 By default, the visibility of the GitHub repository is set to “private”
 but you can also change that:
 
 ``` r
-d6::new_project("2020_smith_unicornIBM", github = TRUE, private_repo = FALSE)
+d6::new_project("smith_2020_unicornIBM", github = TRUE, private_repo = FALSE)
 ```
 
 Note that to create a GitHub repo you will need to have configured your
@@ -147,7 +147,7 @@ prevent the creation of the directories `geo-raw` and `geo-proc` by
 setting `geo` to `FALSE`:
 
 ``` r
-d6::new_project("2020_smith_unicornIBM", geo = FALSE)
+d6::new_project("smith_2020_unicornIBM", geo = FALSE)
 ```
 
 # 
