@@ -5,3 +5,6 @@ d6::render_all_reports()
 ## Add additonal lines for each .Rmd file placed in ./R that you want to render
 d6::render_report("myRMD.Rmd")
  
+## Build Dockerfile
+#devtools::install_github("karthik/holepunch")
+holepunch::write_dockerfile()
