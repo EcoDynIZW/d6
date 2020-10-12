@@ -31,7 +31,7 @@ render_all_reports <- function() {
       paste0("R/", .x), 
       output_file = here::here(
         "docs", "reports", 
-        paste0(gsub(".Rmd|.rmd|.RMD", .y, ""), ".html")
+        paste0(gsub(".Rmd|.rmd|.RMD", "", .y), ".html")
       )
     )
   )
