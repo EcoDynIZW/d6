@@ -1,7 +1,7 @@
 Package: d6
-Title: Bike Accidents and Bicycle Infrastructure in Berlin
+Title: Simplify Workflows of D6 Research Projects
 Version: 0.1.0.0
-Date: 2020-10-01
+Date: 2020-10-12
 Authors@R:
     c(
         person(given = "Cédric",
@@ -9,7 +9,7 @@ Authors@R:
                role = c("aut", "cre"),
                email = "cedricphilippscherer@gmail.com")
     )
-Description: Description: A shiny app to explore acidents in Germany as well as bike lane types and bike accidents Berlin as a contribution to the CorrelAidX challenge 2020 “Analysing and visualising German regional statistics with datenguidepy”.
+Description: The goal of the {d6} package is to simplify the project workflow within the department “Ecologcial Dynamics” at the Leibniz Institute for Zoo and Wildlife Research by providing a standardized folder structure, templates for reports and utility functions.
 License: CC0
 Depends:
     R (>= 3.1.1)
