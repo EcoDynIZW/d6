@@ -2,7 +2,7 @@
 % Please edit documentation in R/render_report.R
 \name{render_report}
 \alias{render_report}
-\title{Render Rmd placed in ./R to html in ./docs/reports}
+\title{Render an Rmd file placed in ./R to html in ./docs/reports}
 \usage{
 render_report(rmd)
 }
@@ -10,5 +10,5 @@ render_report(rmd)
 \item{rmd}{A string. Name of the Rmd file}
 }
 \description{
-Render Rmd placed in ./R to html in ./docs/reports
+Render an Rmd file placed in ./R to html in ./docs/reports
 }
