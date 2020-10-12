@@ -2,6 +2,8 @@
 #'
 #' @param x Value to check.
 #' 
+#' @export
+#' 
 if_not_null <- function(x, ...){
   if (! is.null(x)){
     force(...)

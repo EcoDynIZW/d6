@@ -1,6 +1,8 @@
 #' Render an Rmd file placed in ./R to html in ./docs/reports
 #'
 #' @param rmd A string. Name of the Rmd file
+#' 
+#' @export
 #' @importFrom here here
 #' @importFrom rmarkdown render
 #' 
@@ -17,6 +19,7 @@ render_report <- function(rmd) {
 }
 #' Render All Rmd files placed in ./R to html in ./docs/reports
 #'
+#' @export
 #' @importFrom here here
 #' @importFrom rmarkdown render
 #' 
