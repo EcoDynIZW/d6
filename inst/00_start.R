@@ -1,7 +1,7 @@
 ## ADD DOCUMENTATION TO YOUR PROJECT ----
 
 ## Add meta data about your project to DESCRIPTION
-d6::fill_desc(
+d6:::fill_desc(
   pkg_title = "",         ## The Full Title of the Project
   pkg_description = "",   ## The Description of Your Project
   author_first_name = "", ## Your First Name
