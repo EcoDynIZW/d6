@@ -57,14 +57,20 @@ d6::new_project("smith_2020_unicornIBM")
 ```
 
 *Please give your project a unique and descriptive name:
-**lastname\_year\_project***
+**species\_country\_topic\_name***
+
+For example, when John Smith is developing a species distribution models
+for unicorns in Wonderland, a descriptive title could be:
+`unicornus_wl_sdm_smith_j`. Please use underscores and the
+[international Alpha-2 encoding for
+countries](https://www.iban.com/country-codes).
 
 The main folders created in the root folder (here
-`smith_2020_unicornIBM`) are the following:
+`unicornus_wl_sdm_smith_j`) are the following:
 
 ``` text
 .
-└── smith_2020_unicornIBM
+└── unicornus_wl_sdm_smith_j
     ├── data-raw
     ├── docs
     ├── output
@@ -73,11 +79,11 @@ The main folders created in the root folder (here
 ```
 
 The full scaffolding structure including all subdirectories and
-addiitonal files looks like this:
+additional files looks like this:
 
 ``` text
 . 
-└── smith_2020_unicornIBM 
+└── unicornus_wl_sdm_smith_j
     ├── .Rproj.user         —  Rproject files
     ├── data-raw            —  raw data (tabular data in root folder)
     │    └── geo-raw        —  raw spatial data
