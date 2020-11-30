@@ -53,7 +53,7 @@ documentation of your project.
 To start a new project in the current working directory, simply run:
 
 ``` r
-d6::new_project("smith_2020_unicornIBM")
+d6::new_project("unicornus_wl_sdm_smith_j")
 ```
 
 *Please give your project a unique and descriptive name:
@@ -117,13 +117,13 @@ is created:
 
 ``` r
 ## both work:
-d6::new_project("smith_2020_unicornIBM", path = "absolute/path/to/the/root/folder")
+d6::new_project("unicornus_wl_sdm_smith_j", path = "absolute/path/to/the/root/folder")
 ## or:
-d6::new_project("smith_2020_unicornIBM", path = "absolute/path/to/the/root/folder/")
+d6::new_project("unicornus_wl_sdm_smith_j", path = "absolute/path/to/the/root/folder/")
 ```
 
 The resulting final directory of your project would be
-`absolute/path/to/the/root/folder/smith_2020_unicornIBM`.
+`absolute/path/to/the/root/folder/unicornus_wl_sdm_smith_j`.
 
 # 
 
@@ -133,14 +133,14 @@ If you want to create a GitHub repository for the project at the same
 time, use instead:
 
 ``` r
-d6::new_project("smith_2020_unicornIBM", github = TRUE)
+d6::new_project("unicornus_wl_sdm_smith_j", github = TRUE)
 ```
 
 By default, the visibility of the GitHub repository is set to “private”
 but you can also change that:
 
 ``` r
-d6::new_project("smith_2020_unicornIBM", github = TRUE, private_repo = FALSE)
+d6::new_project("unicornus_wl_sdm_smith_j", github = TRUE, private_repo = FALSE)
 ```
 
 Note that to create a GitHub repo you will need to have configured your
@@ -156,7 +156,7 @@ prevent the creation of the directories `geo-raw` and `geo-proc` by
 setting `geo` to `FALSE`:
 
 ``` r
-d6::new_project("smith_2020_unicornIBM", geo = FALSE)
+d6::new_project("unicornus_wl_sdm_smith_j", geo = FALSE)
 ```
 
 # 
