@@ -1,0 +1,4 @@
+name: D6 Template (Minimal)
+description: >
+   Template for a basic Rmarkdown research report. No additional explanations provided.
+create_dir: FALSE

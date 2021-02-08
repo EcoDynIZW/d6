@@ -1,0 +1,71 @@
+---
+title: "Your Project: Data Preparation" ## name of your project and analysis step
+description: |
+    The aim of this study is...
+author:
+    ## author information; single arguemnts can be deleted if not needed
+    - name: "John Smith"
+      url: https://izw-berlin.de/en/john-smith-en.html  
+      affiliation: Leibniz Institute for Zoo and Wildlife Research
+      affiliation_url: https://izw-berlin.de/en/
+      orcid_id: 0000-0003-0645-5666
+    - name: "Jane Doe"
+      url: https://janedoe.com
+      affiliation: Leibniz Institute for Zoo and Wildlife Research
+      affiliation_url: https://izw-berlin.de/en/
+    ## add more authors with the same intendation and styling if needed 
+    ## a new author always starts with a hyphen!
+date: "`r Sys.Date()`"
+output: 
+    distill::distill_article:
+        highlight: kate      ## styling of code
+        code_folding: false  ## if `true` you can expand and shrink code chunks
+        toc: true            ## if `true` adds a table of content
+        toc_depth: 2         ## level to be displayed in the table of content
+---
+
+* **Research question:**
+* **Study area:**
+* **Data:** 
+
+
+# Setup
+
+```{r packages}
+## for non-CRAN packages please keep install instruction
+## but commented so it is not run each time, e.g.
+# devtools::install_github("EcoDynIZW/template")
+
+## libraries used in this script
+## please add ALL LIBRARIES NEEDED HERE
+## please remove libraries from the list that are not needed anymore 
+## at a later stage
+library()
+```
+
+
+# Data
+
+```{r data}
+## There are many ways to import data, see a full list here:
+df <- readr::read_csv("your-data.csv")
+sf <- sf::read_sf("your-geo-data.shp")
+```
+
+
+
+
+***
+
+<details><summary>Session Info</summary>
+
+```{r sessionInfo}
+## DO NOT REMOVE!
+## We store the settings of your computer and the current versions of the
+## packages used to allow for reproducibility
+Sys.time()
+#git2r::repository() ## uncomment if you are using GitHub
+sessionInfo()
+```
+
+</details>

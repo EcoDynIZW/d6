@@ -1,0 +1,4 @@
+name: D6 Template (Basic)
+description: >
+   Template for a Rmarkdown research report with comments helping you to get started. Includes some prewritten codes for data import and cleaning.
+create_dir: FALSE

@@ -1,0 +1,66 @@
+---
+title: "Your Project: Data Preparation" 
+description: |
+    The aim of this study is...
+author:
+    - name: ""
+      url: 
+      affiliation: Leibniz Institute for Zoo and Wildlife Research
+      affiliation_url: https://izw-berlin.de/en/
+      orcid_id: 
+    - name: ""
+      url: 
+      affiliation: Leibniz Institute for Zoo and Wildlife Research
+      affiliation_url: https://izw-berlin.de/en/
+date: "`r Sys.Date()`"
+output: 
+    distill::distill_article:
+        highlight: kate
+        code_folding: false  
+        toc: true            
+        toc_depth: 2         
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = TRUE,
+                      fig.width = 9, fig.height = 6, dpi = 500, 
+                      retina = 1, fig.showtext = TRUE)
+```
+
+* **Research question:**
+* **Study area:**
+* **Data:** 
+
+
+# Setup
+
+```{r packages}
+## please add ALL LIBRARIES NEEDED HERE
+## for non-CRAN packages please keep install instruction but commented
+library()
+```
+
+
+# Data
+
+```{r data}
+
+```
+
+
+
+
+
+***
+
+<details><summary>Session Info</summary>
+
+```{r sessionInfo}
+## DO NOT REMOVE!
+Sys.time()
+#git2r::repository() ## uncomment if you are using GitHub
+sessionInfo()
+```
+
+</details>

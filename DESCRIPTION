@@ -1,6 +1,6 @@
 Package: d6
 Title: Simplify Workflows of D6 Research Projects
-Version: 0.1.0.1
+Version: 0.1.0.2
 Date: 2020-10-12
 Authors@R:
     c(
@@ -20,9 +20,9 @@ Imports:
     cli,
     desc,
     here,
-    rmarkdown
+    rmarkdown,
+    distill
 Suggests:
-    rmdTemplates,
     testthat
 VignetteBuilder: knitr
 Encoding: UTF-8
