@@ -8,7 +8,7 @@ author:
       url: https://izw-berlin.de/en/john-smith-en.html  
       affiliation: Leibniz Institute for Zoo and Wildlife Research
       affiliation_url: https://izw-berlin.de/en/
-      orcid_id: 0000-0003-0645-5666
+      orcid_id: 0000-0000-0000-0000
     - name: "Jane Doe"
       url: https://janedoe.com
       affiliation: Leibniz Institute for Zoo and Wildlife Research
