@@ -17,7 +17,10 @@ install_d6_packages <- function(geo = TRUE) {
       "rgdal",
       "rgeos",
       "raster",
-      "sf"
+      "sp",
+      "sf",
+      "terra",
+      "stars"
     )
   }
   new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
