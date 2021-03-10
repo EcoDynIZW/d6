@@ -4,7 +4,7 @@
 ### Simplify Workflows of D6 Research Projects
 
 > The goal of the `{d6}` package is to simplify the project workflow
-> within the department “Ecologcial Dynamics” at the Leibniz Institute
+> within the department “Ecological Dynamics” at the Leibniz Institute
 > for Zoo and Wildlife Research by providing a standardized folder
 > structure, templates for reports and utility functions.
 
@@ -14,15 +14,15 @@ There are four main functionalities:
     `new_project()`](#create-project-directory)
 2.  [Install a set of common packages with
     `install_d6_packages()`](#install-common-packages)
-3.  [Provide custom Rmarkdown templates via `File > New File >
-    Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
+3.  [Provide custom Rmarkdown templates via
+    `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
 4.  [Render all Rmarkdown documents to ./docs/report with
     `render_all_reports()` or
     `render_report()`](#render-rmarkdown-files-to-reports)
 
 <br>
 
------
+------------------------------------------------------------------------
 
 <br>
 
@@ -37,9 +37,13 @@ install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
 ```
 
+(Note: If you are asked if you want to update other packgaes either
+press “No” (option 3) and continue or update the packages before running
+the install command again.)
+
 <br>
 
------
+------------------------------------------------------------------------
 
 <br>
 
@@ -169,7 +173,7 @@ add a MIT license (if needed) and add package dependencies.
 
 <br>
 
------
+------------------------------------------------------------------------
 
 <br>
 
@@ -196,7 +200,7 @@ d6::install_d6_packages(geo = FALSE)
 
 <br>
 
------
+------------------------------------------------------------------------
 
 <br>
 
@@ -209,14 +213,14 @@ preformatted YAML header and chunks for the setup.
 
 The following templates are available for now:
 
-  - *EcoDynIZW Basic*: Template for a basic Rmarkdown research report
+-   *EcoDynIZW Basic*: Template for a basic Rmarkdown research report
     (mostly empty)
-  - *EcoDynIZW Data*: Template for an Rmarkdown research report for data
+-   *EcoDynIZW Data*: Template for an Rmarkdown research report for data
     import and cleaning
 
 <br>
 
------
+------------------------------------------------------------------------
 
 <br>
 
@@ -243,21 +247,21 @@ d6::render_report("notsurewhybutIhaveasubfolder/my-report.Rmd")
 
 <br>
 
------
+------------------------------------------------------------------------
 
 <br>
 
 ### Acknowledgements:
 
-This package would not exist without the work of many great people\!
+This package would not exist without the work of many great people!
 
-  - The code to create the project folder is based on the [template
+-   The code to create the project folder is based on the [template
     package by Francisco
     Rodriguez-Sanchez](https://github.com/Pakillo/template) (and
     references therein)
-  - The 00\_start script is inspired by the [`{golem}`
+-   The 00\_start script is inspired by the [`{golem}`
     package](https://thinkr-open.github.io/golem/)
-  - Rstudio for the development of Rmarkdown and all the great things
+-   Rstudio for the development of Rmarkdown and all the great things
     that come with it (knitting, templates, themes, …)
 
 #### Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
