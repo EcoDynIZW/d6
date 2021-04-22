@@ -6,8 +6,10 @@
 install_d6_packages <- function(geo = TRUE) {
   list.of.packages <- c(
     "tidyverse", 
-    #"lme4",
-    #"glmmTMB"
+    "here",
+    "lubridate",
+    "patchwork",
+    "vroom",
     "usethis",
     "credentials"
   )
@@ -19,8 +21,9 @@ install_d6_packages <- function(geo = TRUE) {
       "raster",
       "sp",
       "sf",
-      "terra",
-      "stars"
+      #"terra",
+      #"stars",
+      "tmap"
     )
   }
   new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
