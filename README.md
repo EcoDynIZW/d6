@@ -198,6 +198,19 @@ are not intending to process geodata, set `geo` to `FALSE`:
 d6::install_d6_packages(geo = FALSE)
 ```
 
+The default packages that are going to be installed are:
+
+``` text
+tidyverse (tibble, dplyr, tidyr, ggplot2, readr, forecats, stringr, purrr), lubridate, here, vroom, patchwork, usethis
+```
+
+The following packages will be installed in case you specify
+`geo = TRUE`:
+
+``` text
+rgdal, geos, raster, sp, sf, tmap
+```
+
 <br>
 
 ------------------------------------------------------------------------
@@ -214,9 +227,9 @@ preformatted YAML header and chunks for the setup.
 The following templates are available for now:
 
 -   *EcoDynIZW Basic*: Template for a basic Rmarkdown research report
-    (mostly empty)
--   *EcoDynIZW Data*: Template for an Rmarkdown research report for data
-    import and cleaning
+    including bits of codes and comments to get started
+-   *EcoDynIZW Minimal*: Template for an Rmarkdown research report
+    (almost empty)
 
 <br>
 
