@@ -47,9 +47,12 @@ library()
 # Data
 
 ```{r data}
-## There are many ways to import data, see a full list here:
-df <- readr::read_csv("your-data.csv")
-sf <- sf::read_sf("your-geo-data.shp")
+## To import tabular data (.csv, .txt, .xls etc.)
+df <- vroom::vroom("your-data.csv")
+
+## To import geospatial data
+sf <- sf::read_sf("your-geo-data.shp") ## vector data
+raster <- raster::raster("your-geo-raster.tiff") ## raster data
 ```
 
 
