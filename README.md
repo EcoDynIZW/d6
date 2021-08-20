@@ -37,9 +37,9 @@ install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
 ```
 
-(Note: If you are asked if you want to update other packgaes either
+If you are asked if you want to update other packages either
 press “No” (option 3) and continue or update the packages before running
-the install command again.)
+the install command again.
 
 <br>
 
