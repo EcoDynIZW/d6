@@ -9,8 +9,6 @@ output: github_document
 
 > The goal of the `{d6}` package is to simplify the project workflow within the department "Ecological Dynamics" at the Leibniz Institute for Zoo and Wildlife Research by providing a standardized folder structure, templates for reports and utility functions.
 
-TEST
-
 There are four main functionalities:
 
 1. [Create standardized project directories with `new_project()`](#create-project-directory)
