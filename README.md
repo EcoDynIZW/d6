@@ -8,6 +8,8 @@
 > for Zoo and Wildlife Research by providing a standardized folder
 > structure, templates for reports and utility functions.
 
+TEST
+
 There are four main functionalities:
 
 1.  [Create standardized project directories with
@@ -37,9 +39,9 @@ install.packages("devtools")
 devtools::install_github("EcoDynIZW/d6")
 ```
 
-If you are asked if you want to update other packages either
+(Note: If you are asked if you want to update other packgaes either
 press “No” (option 3) and continue or update the packages before running
-the install command again.
+the install command again.)
 
 <br>
 
@@ -190,7 +192,7 @@ Note that this function is going to check preinstalled versions and will
 only install packages that are not installed with your current R
 version.
 
-Again, there is an arguement `geo` so you can decide if you want to
+Again, there is an argument `geo` so you can decide if you want to
 install common geodata packages as well (which is the default). If you
 are not intending to process geodata, set `geo` to `FALSE`:
 
