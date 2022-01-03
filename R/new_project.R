@@ -16,6 +16,8 @@
 #'
 new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRUE, geo = TRUE){
   
+   <- readline(prompt = "Enter age: ")
+  
   ## check path string
   end <- substr(path, (nchar(path) + 1) - 1, nchar(path))
   if(end == "/") { path_full <- paste0(path, name) } else { path_full <- paste0(path, "/", name) }
@@ -84,7 +86,7 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
       " was created at ", 
       fs::path_abs(path),
       ".\n\n", 
-      "To continue working on your project, start editing the 01_start.R file in the new Rstudio session."
+      "To continue working on your project, start editing the 00_start.R file in the new Rstudio session."
     )
   )
   
