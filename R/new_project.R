@@ -16,8 +16,6 @@
 #'
 new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRUE, geo = TRUE){
   
-   <- readline(prompt = "Enter age: ")
-  
   ## check path string
   end <- substr(path, (nchar(path) + 1) - 1, nchar(path))
   if(end == "/") { path_full <- paste0(path, name) } else { path_full <- paste0(path, "/", name) }
