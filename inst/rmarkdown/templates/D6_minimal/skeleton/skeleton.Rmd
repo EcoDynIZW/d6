@@ -21,11 +21,10 @@ output:
         toc_depth: 2         
 ---
 
-
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = TRUE, message = TRUE,
-                      fig.width = 9, fig.height = 6, dpi = 500, 
-                      retina = 1, fig.showtext = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = "ragg_png", fig.width = 9, fig.height = 6, dpi = 600, retina = 1)
+Sys.setlocale("LC_TIME", "C")
 ```
 
 * **Research question:**

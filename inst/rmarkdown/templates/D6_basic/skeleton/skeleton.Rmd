@@ -24,6 +24,12 @@ output:
         toc_depth: 2         ## level to be displayed in the table of content
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
+                      dev = "ragg_png", fig.width = 9, fig.height = 6, dpi = 600, retina = 1)
+Sys.setlocale("LC_TIME", "C")
+```
+
 * **Research question:**
 * **Study area:**
 * **Data:** 
