@@ -1,0 +1,4 @@
+name: D6 Template (Teaching)
+description: >
+   Template for a teaching script rendered to HTML with a sidebar for navigation and custom styling.
+create_dir: FALSE
