@@ -1,8 +1,7 @@
 library(template)
 
-context("Fake test")
+context("New Project")
 
-test_that("examplefunction can be run", {
-  output <- examplefunction("testing")
-  expect_match(output, "testing")
+test_that("new_project can be run", {
+  new_project("unicornus_wl_sdm_smith_j")
 })

@@ -1,4 +1,4 @@
 library(testthat)
-library(template)
+library(d6)
 
-test_check("template")
+test_check("d6")

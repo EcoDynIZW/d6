@@ -4,7 +4,11 @@
 \alias{render_all_reports}
 \title{Render All Rmd files placed in ./R to html in ./docs/reports}
 \usage{
-render_all_reports()
+render_all_reports(sub_dirs = FALSE)
+}
+\arguments{
+\item{sub_dirs}{Should Rmd files placed in sub directories (./R/.../*.Rmd) be
+rendered? Defaults to FALSE.}
 }
 \description{
 Render All Rmd files placed in ./R to html in ./docs/reports

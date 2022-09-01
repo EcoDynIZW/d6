@@ -1,6 +1,6 @@
 Package: d6
 Title: Simplify Workflows of D6 Research Projects
-Version: 0.1.0.2
+Version: 0.1.0.3
 Date: 2020-10-12
 Authors@R:
     c(
@@ -21,7 +21,8 @@ Imports:
     desc,
     here,
     rmarkdown,
-    distill
+    distill,
+    knitr
 Suggests:
     testthat
 VignetteBuilder: knitr
@@ -29,4 +30,4 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/EcoDynIZW/d6
 BugReports: https://github.com/EcoDynIZW/d6/issues
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1

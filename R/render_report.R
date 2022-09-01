@@ -19,12 +19,15 @@ render_report <- function(rmd) {
 }
 #' Render All Rmd files placed in ./R to html in ./docs/reports
 #'
+#' @param sub_dirs Should Rmd files placed in sub directories (./R/.../*.Rmd) be
+#'                 rendered? Defaults to FALSE.
+#'
 #' @export
 #' @importFrom here here
 #' @importFrom rmarkdown render
 #' 
-render_all_reports <- function() {
-  rmds <- list.files(here::here("R"), pattern = "*.rmd|*.Rmd|*.RMD", recursive = TRUE, include.dirs = TRUE)
+render_all_reports <- function(sub_dirs = FALSE) {
+  rmds <- list.files(here::here("R"), pattern = "*.rmd|*.Rmd|*.RMD", recursive = sub_dirs, include.dirs = TRUE)
   out <- gsub(".*/", "", rmds)
   
   purrr::map2(
