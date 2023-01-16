@@ -90,7 +90,7 @@ additional files looks like this:
 └── unicornus_wl_sdm_smith_j
     ├── .Rproj.user         —  Rproject files
     ├── data-raw            —  raw data (tabular data in root folder)
-    │    └── geo-raw        —  raw spatial data
+    │   └── geo-raw         —  raw spatial data
     ├── docs                —  documents
     │   ├── admin           —  adminstrative docs, e.g. permits 
     │   ├── literature      —  literature used for parameterization + ms
