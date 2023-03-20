@@ -1,9 +1,9 @@
 #' Check for NULL values
 #'
 #' @param x Value to check.
+#' @param ... Other arguments to be passed.
 #' 
 #' @export
-#' 
 if_not_null <- function(x, ...){
   if (! is.null(x)){
     force(...)
@@ -18,12 +18,12 @@ if_not_null <- function(x, ...){
 #' @param author_last_name Last Name of the author
 #' @param author_email Email of the author
 #' @param repo_url URL (if needed)
+#' @param pkg Path to the package directory
 #' 
 #' @importFrom desc description
 #' @importFrom cli cat_bullet
 #' @importFrom fs path path_abs
 #' @importFrom here here
-#' 
 fill_desc <- function(
   pkg_title,
   pkg_description,

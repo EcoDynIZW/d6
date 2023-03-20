@@ -2,7 +2,9 @@
 #'
 #' @param geo Boolean. Do you intent to process geodata? Installs important geo packages if `TRUE` (the default)
 #' 
-#'@export
+#' @importFrom utils install.packages
+#' @importFrom utils installed.packages
+#' @export
 install_d6_packages <- function(geo = TRUE) {
   list.of.packages <- c(
     "tidyverse", 
@@ -13,7 +15,7 @@ install_d6_packages <- function(geo = TRUE) {
     "usethis",
     "credentials"
   )
-  if(geo == TRUE) {
+  if (geo == TRUE) {
     list.of.packages <- c(
       list.of.packages,
       "rgdal",
@@ -26,6 +28,6 @@ install_d6_packages <- function(geo = TRUE) {
       "tmap"
     )
   }
-  new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
-  if(length(new.packages)) install.packages(new.packages)
+  new.packages <- list.of.packages[!(list.of.packages %in% utils::installed.packages()[,"Package"])]
+  if(length(new.packages)) utils::install.packages(new.packages)
 }

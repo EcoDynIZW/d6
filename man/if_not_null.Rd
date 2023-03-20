@@ -8,6 +8,8 @@ if_not_null(x, ...)
 }
 \arguments{
 \item{x}{Value to check.}
+
+\item{...}{Other arguments to be passed.}
 }
 \description{
 Check for NULL values

@@ -26,6 +26,8 @@ fill_desc(
 \item{author_email}{Email of the author}
 
 \item{repo_url}{URL (if needed)}
+
+\item{pkg}{Path to the package directory}
 }
 \description{
 Fill your description

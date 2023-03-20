@@ -1,14 +1,13 @@
 Package: d6
 Title: Simplify Workflows of D6 Research Projects
-Version: 0.1.0.3
+Version: 0.1.0.4
 Date: 2020-10-12
 Authors@R:
-    c(
-        person(given = "Cédric",
-               family = "Scherer",
-               role = c("aut", "cre"),
-               email = "cedricphilippscherer@gmail.com")
-    )
+    person(given = "Cédric",
+           family = "Scherer",
+           role = c("aut", "cre"),
+           email = "hello@cedricscherer.com",
+           comment = c(ORCID = "0000-0003-0465-2543"))
 Description: The goal of the {d6} package is to simplify the project workflow within the department “Ecologcial Dynamics” at the Leibniz Institute for Zoo and Wildlife Research by providing a standardized folder structure, templates for reports and utility functions.
 License: CC0
 Depends:
@@ -22,7 +21,11 @@ Imports:
     here,
     rmarkdown,
     distill,
-    knitr
+    knitr,
+    ggplot2,
+    stringr,
+    purrr,
+    systemfonts
 Suggests:
     testthat
 VignetteBuilder: knitr
@@ -30,4 +33,4 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/EcoDynIZW/d6
 BugReports: https://github.com/EcoDynIZW/d6/issues
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3

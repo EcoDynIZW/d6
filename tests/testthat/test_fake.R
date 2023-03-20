@@ -1,4 +1,4 @@
-library(template)
+library(d6)
 
 context("New Project")
 
