@@ -1,0 +1,45 @@
+---
+title: "Please Add Your Title Here"
+description: |
+  Please enter a meaningful description.
+  The description will also appear on the blog overview as teaser text as well as at the top of the post. 
+categories:
+  - please enter categories in this format, one on each line
+  - please check existing tags on our webpage and try to stick to them
+  - avoid very specific tags and check carefully for mistakes
+author:
+  - name: Enter your name here
+    affiliation: IZW Berlin
+    affiliation_url: https://ecodynizw.github.io/EcoDynIZW
+date: 2000-01-01 Enter date in this format
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE) ## keep this, add other settings if needed
+```
+
+Please write some accompanying text for each chunk explaining the reason and/or code and output. Leave an empty line between the text and the chunk.
+
+```{r install}
+
+```
+
+If you want to show pseudo code (code that should not run but you want to show the code as an example), please also add the respective output (the returned values in the console) as text to the same chunk. Use `eval=FALSE` as a chunk option to include (but not run) the code output.
+
+```{r example, eval=FALSE}
+print("hello world")
+[1] "hello world"
+```
+
+If you want to add figures but to hide the code used to produce them, add `echo=FALSE` as a chunk option:
+
+```{r plot, echo=FALSE}
+
+```
+
+Please knit the whole document in the end, to test if it is working!
+
