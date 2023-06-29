@@ -37,10 +37,13 @@ theme_d6 <- function(base_size = 14, base_family = "PT Sans",
                      bg = "transparent", serif = FALSE, ...) {
   
   if(!is.character(base_family)) stop('base_family must be a character input.')
-  if(!is.numeric(base_size)) stop('base_size must be a positive number.')
-  if(!is.character(grid)) stop('grid must be a character: "" or "none" for no grid or any combination of "X", "Y", "x" and "y".')
-  if(!is.character(legend) | !is.vector(legend)) stop('legend must be a characte or vector: "none", "left", "right", "bottom", "top", or a two-element numeric vector specifying the x and y coordinates to place the legend inside the panel.')
-  if(!is.character(mono)) stop('mono must be a character: "" or "none" or any combination of "x" or "X", "y" or "Y", and "legend", "l" or "L".')
+  if(!is.numeric(base_size) || base_size <= 0) stop('base_size must be a positive number.') 
+  if(!grid %in% c("", "none", "xy", "xY", "Xy", "XY", "x", "X", "y", "Y")) stop('grid must be a character: "" or "none" for no grid or any combination of "X", "Y", "x" and "y".')
+  str <- isTRUE(legend %in% c("top", "bottom", "left", "right"))
+  vec <- is.numeric(legend) & length(legend == 2)
+  out <- isFALSE(str || vec)
+  if(out) stop('legend must be a character or vector: "none", "left", "right", "bottom", "top", or a two-element numeric vector specifying the x and y coordinates to place the legend inside the panel.')
+  if(!mono %in% c("", "none", "xy", "xY", "Xy", "XY", "x", "X", "y", "Y", "legend", "l", "L", "xylegend", "xyl", "xyL", "Xylegend", "Xyl", "XyL", "xYlegend", "xYl", "xYL", "XYlegend", "XYl", "XYL")) stop('mono must be a character: "" or "none" or any combination of "x" or "X", "y" or "Y", and "legend", "l" or "L".')
   if(!is.character(bg)) stop('bg must be a character containing a color.')
   if(!is.logical(serif)) stop('serif must be either TRUE or FALSE.')
   
