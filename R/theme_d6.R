@@ -39,7 +39,7 @@ theme_d6 <- function(base_size = 14, base_family = "PT Sans",
   if(!is.character(base_family)) stop('base_family must be a character input.')
   if(!is.numeric(base_size) || base_size <= 0) stop('base_size must be a positive number.') 
   if(!grid %in% c("", "none", "xy", "xY", "Xy", "XY", "x", "X", "y", "Y")) stop('grid must be a character: "" or "none" for no grid or any combination of "X", "Y", "x" and "y".')
-  str <- isTRUE(legend %in% c("top", "bottom", "left", "right"))
+  str <- isTRUE(legend %in% c("", "none", "top", "bottom", "left", "right"))
   vec <- is.numeric(legend) & length(legend) == 2
   out <- isTRUE(str || vec)
   if(!out) stop('legend must be a character or vector: "none", "left", "right", "bottom", "top", or a two-element numeric vector specifying the x and y coordinates to place the legend inside the panel.')
