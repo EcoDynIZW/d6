@@ -17,14 +17,17 @@
 #' \code{"right"}, \code{"bottom"}, or \code{"top"}, or a two-element numeric 
 #' vector specifying the relative x and y coordinates to place the legend inside 
 #' the panel.
+#' @param serif Logical. Should Sans or Sans Serif fonts be used? Default is 
+#' \code{FALSE}.
 #' @param mono Character. Should the axis and/or legend text be formatted as tabular, 
 #' mono-spaced font? Specify the axes with \code{"x"}, \code{"X"}, \code{"y"}, 
 #' and \code{"Y"} and the legend as \code{"legend"}, \code{"l"} or \code{"L"}. 
 #' If you want to use the base family, set \code{""} or \code{"none"} (default).
+#' @param margin Vector. The plot margin four-element numeric vector specifying 
+#' the margin on the top, right, bottom, and left. Defaults to 
+#' \code{rep(base_size / 2, 4)}
 #' @param bg Color. The color used for the plot background, defaults to 
 #' transparent.
-#' @param serif Logical. Should Sans or Sans Serif fonts be used? Default is 
-#' \code{FALSE}.
 #' @param ... Other arguments passed to complete ggplot2 themes.
 #'
 #' @export
@@ -34,7 +37,8 @@
 #'   theme_d6(grid = "y", bg = "grey90", legend = "top", mono = "y")
 theme_d6 <- function(base_size = 14, base_family = "PT Sans",
                      grid = "xy", legend = "bottom", mono = "none",
-                     bg = "transparent", serif = FALSE, ...) {
+                     bg = "transparent", serif = FALSE, 
+                     margin = rep(base_size / 2, 4), ...) {
   
   if(!is.character(base_family)) stop('base_family must be a character input.')
   if(!is.numeric(base_size) || base_size <= 0) stop('base_size must be a positive number.') 
@@ -46,6 +50,7 @@ theme_d6 <- function(base_size = 14, base_family = "PT Sans",
   if(!mono %in% c("", "none", "xy", "xY", "Xy", "XY", "x", "X", "y", "Y", "legend", "l", "L", "xylegend", "xyl", "xyL", "Xylegend", "Xyl", "XyL", "xYlegend", "xYl", "xYL", "XYlegend", "XYl", "XYL")) stop('mono must be a character: "" or "none" or any combination of "x" or "X", "y" or "Y", and "legend", "l" or "L".')
   if(!is.character(bg)) stop('bg must be a character containing a color.')
   if(!is.logical(serif)) stop('serif must be either TRUE or FALSE.')
+  if(!is.numeric(margin) & length(margin) != 4) stop('margin must a be four-element numeric vector specifying the margin on the top, right, bottom, and left.')
   
   half_line <- base_size/2
 
@@ -116,6 +121,7 @@ theme_d6 <- function(base_size = 14, base_family = "PT Sans",
         face = "bold", size = ggplot2::rel(1.35), hjust = 0, margin = ggplot2::margin(0, 0, 10, 0)
       ),
       plot.title.position = "plot",
+      plot.margin = ggplot2::margin(margin),
       plot.background = ggplot2::element_rect(color = bg, fill = bg)
     )
 
