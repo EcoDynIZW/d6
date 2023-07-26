@@ -25,7 +25,8 @@ Imports:
     ggplot2,
     stringr,
     purrr,
-    systemfonts
+    systemfonts,
+    extrafont
 Suggests:
     testthat
 VignetteBuilder: knitr

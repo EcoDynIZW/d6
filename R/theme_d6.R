@@ -51,6 +51,7 @@ theme_d6 <- function(base_size = 14, base_family = "PT Sans",
   if(!is.character(bg)) stop('bg must be a character containing a color.')
   if(!is.logical(serif)) stop('serif must be either TRUE or FALSE.')
   if(!is.numeric(margin) & length(margin) != 4) stop('margin must a be four-element numeric vector specifying the margin on the top, right, bottom, and left.')
+  if(.Platform$OS.type == "windows"){extrafont::loadfonts(device="win", quiet = TRUE)} # needed step for loading extrafonts in windows
   
   half_line <- base_size/2
 
