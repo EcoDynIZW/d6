@@ -8,17 +8,13 @@
 > for Zoo and Wildlife Research by providing a standardized folder
 > structure, templates for reports and utility functions.
 
-There are four main functionalities:
+There are five main functionalities:
 
-1.  [Create standardized project directories with
-    `new_project()`](#create-project-directory)
-2.  [Install a set of common packages with
-    `install_d6_packages()`](#install-common-packages)
-3.  [Provide custom Rmarkdown templates via
-    `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
-4.  [Render all Rmarkdown documents to ./docs/report with
-    `render_all_reports()` or
-    `render_report()`](#render-rmarkdown-files-to-reports)
+1.  [Create standardized project directories with `new_project()`](#create-project-directory)
+2.  [Install a set of common packages with `install_d6_packages()`](#install-common-packages)
+3.  [Provide a corporate ggplot2 theme with sensible defaults and additional utilities via `theme_d6()`](#corporate-ggplot2-theme)
+4.  [Provide custom Rmarkdown templates via `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
+5.  [Render all Rmarkdown documents to ./docs/report with `render_all_reports()` or `render_report()`](#render-rmarkdown-files-to-reports)
 
 <br>
 
@@ -209,6 +205,77 @@ The following packages will be installed in case you specify
 
 ``` text
 rgdal, geos, raster, sp, sf, tmap
+```
+
+<br>
+
+------------------------------------------------------------------------
+
+<br>
+
+## Corporate ggplot2 Theme
+
+The package provides a ggplot2 theme with sensible defautls and additional 
+utilities to simplify the process of creating a good-looking, clean look.
+Furthermore, we aim to have a consistent look across all our figures shown
+in manuscripts, presentations, and on posters.
+
+The theme can be added to a ggplot object as usual:
+
+```r
+library(ggplot2)
+ggplot(mpg, aes(x = displ, y = cty)) +
+  geom_point() +
+  d6::theme_d6()
+```
+
+Or set as the new global theme by overwritting the current default:
+
+```r
+theme_set(d6::theme_d6())
+```
+
+### Typefaces
+
+The D6 corporate theme uses the PT font superfamily and will inform you to
+install the relevant files in case they are missing on your machine:
+
+- [PT Sans](https://fonts.google.com/specimen/PT+Sans)
+- [PT Serif](https://fonts.google.com/specimen/PT+Serif)
+- [PT Mono](https://fonts.google.com/specimen/PT+Mono)
+
+By default, the theme uses PT Sans. If you prefer serif fonts or such a
+typeface is required, you can set `serif = TRUE` inside the theme:
+
+```r
+ggplot(mpg, aes(x = displ, y = cty)) +
+  geom_point() +
+  d6::theme_d6(serif = TRUE)
+```
+
+
+### Additional Utility Arguments
+
+In addition to the common arguments to specify the bas settings
+(`base_family`, `base_size`, `base_line_size`, and `base_rect_size`), 
+we have added the following utility settings to simplify the modification
+of the theme:
+
+-  `grid`: remove or add major grid lines (`"xy"` by default)
+-  `legend`: control legend position (`"bottom"` by default)
+-  `mono`: use a tabular, monospaced font for numeric scales such as x, y, and legends (`"none"` by default)
+-  `bg`: define background color (`"transparent"` by default)
+-  `serif`: set main typeface (`FALSE` by default; see above)
+
+```r
+ggplot(mpg, aes(x = class, y = hwy, color = factor(year))) + 
+  geom_boxplot() +
+  d6::theme_d6(
+    grid = "y",
+    legend = "top",
+    mono = "yl",
+    bg = "cornsilk"
+  )
 ```
 
 <br>
