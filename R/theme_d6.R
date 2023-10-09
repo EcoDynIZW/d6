@@ -8,7 +8,7 @@
 #' (which is slightly larger than in the default themes which use 11).
 #' @param base_family Character. The base font family, defaults to PT Sans. 
 #' Typefaces need to be installed locally. 
-#' @param grid Cgaracter. Should the panel grid be drawn? Specify \code{""} or 
+#' @param grid Character. Should the panel grid be drawn? Specify \code{""} or 
 #' code{"none"} 
 #' to draw no grid or any combination of \code{"x"}, \code{"X"}, \code{"y"}, 
 #' and \code{"Y"} to draw horizontal (y) and/or vertical (x) grid lines.
@@ -51,7 +51,7 @@ theme_d6 <- function(base_size = 14, base_family = "PT Sans",
   if(!is.character(bg)) stop('bg must be a character containing a color.')
   if(!is.logical(serif)) stop('serif must be either TRUE or FALSE.')
   if(!is.numeric(margin) & length(margin) != 4) stop('margin must a be four-element numeric vector specifying the margin on the top, right, bottom, and left.')
-  if(.Platform$OS.type == "windows"){extrafont::loadfonts(device="win", quiet = TRUE)} # needed step for loading extrafonts in windows
+  #if(.Platform$OS.type == "windows"){extrafont::loadfonts(device="win", quiet = TRUE)} # needed step for loading extrafonts in windows
   
   half_line <- base_size/2
 
