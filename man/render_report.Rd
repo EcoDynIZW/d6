@@ -12,3 +12,7 @@ render_report(rmd)
 \description{
 Render an Rmd file placed in ./R to html in ./docs/reports
 }
+\examples{
+render_report("doc.rmd")
+
+}

@@ -6,6 +6,8 @@
 #' @importFrom here here
 #' @importFrom rmarkdown render
 #' 
+#' @examples render_report("doc.rmd")
+#' 
 render_report <- function(rmd) {
   out <- gsub(".*/", "", rmd)
   

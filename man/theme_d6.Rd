@@ -12,6 +12,7 @@ theme_d6(
   mono = "none",
   bg = "transparent",
   serif = FALSE,
+  margin = rep(base_size/2, 4),
   ...
 )
 }
@@ -22,7 +23,7 @@ theme_d6(
 \item{base_family}{Character. The base font family, defaults to PT Sans. 
 Typefaces need to be installed locally.}
 
-\item{grid}{Cgaracter. Should the panel grid be drawn? Specify \code{""} or 
+\item{grid}{Character. Should the panel grid be drawn? Specify \code{""} or 
 code{"none"} 
 to draw no grid or any combination of \code{"x"}, \code{"X"}, \code{"y"}, 
 and \code{"Y"} to draw horizontal (y) and/or vertical (x) grid lines.}
@@ -44,10 +45,19 @@ transparent.}
 \item{serif}{Logical. Should Sans or Sans Serif fonts be used? Default is 
 \code{FALSE}.}
 
+\item{margin}{Vector. The plot margin four-element numeric vector specifying 
+the margin on the top, right, bottom, and left. Defaults to 
+\code{rep(base_size / 2, 4)}}
+
 \item{...}{Other arguments passed to complete ggplot2 themes.}
 }
 \description{
 A dedicated theme for graphics created within the D6, with sensible defaults 
 and additional options. It is based on the light theme and uses the custom 
 typefaces PT Sans (defaul) and PT Serif (optional).
+}
+\examples{
+library(ggplot2)
+ggplot(mpg, aes(x = class, y = cty, color = class)) + geom_boxplot() +
+  theme_d6(grid = "y", bg = "grey90", legend = "top", mono = "y")
 }
