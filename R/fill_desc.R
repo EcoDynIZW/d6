@@ -2,8 +2,6 @@
 #'
 #' @param x Value to check.
 #' @param ... Other arguments to be passed.
-#' 
-#' @export
 if_not_null <- function(x, ...){
   if (! is.null(x)){
     force(...)
