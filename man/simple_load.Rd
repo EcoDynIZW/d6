@@ -4,11 +4,15 @@
 \alias{simple_load}
 \title{Load Multiple Packages in One Go (and install them if necessary)}
 \usage{
-simple_load(pckgs = NULL)
+simple_load(pckgs = NULL, update_cran = FALSE, update_gh = FALSE)
 }
 \arguments{
 \item{pckgs}{A vector of packages to load. Packages from CRAN and GitHub can 
 be passed simultaneously.}
+
+\item{update_cran}{Logical. Should CRAN packages be updated? Defaults to FALSE.}
+
+\item{update_gh}{Logical. Should GitHub packages be updated? Defaults to FALSE.}
 }
 \description{
 Load Multiple Packages in One Go (and install them if necessary)
