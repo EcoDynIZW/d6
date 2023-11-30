@@ -14,7 +14,7 @@ There are five main functionalities:
 2.  [Install a set of common packages with `install_d6_packages()`](#install-common-packages)
 3.  [Provide a corporate ggplot2 theme with sensible defaults and additional utilities via `theme_d6()`](#corporate-ggplot2-theme)
 4.  [Provide custom Rmarkdown templates via `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
-5.  [Render all Rmarkdown documents to ./docs/report with `render_all_reports()` or `render_report()`](#render-rmarkdown-files-to-reports)
+5.  [Render all your Rmarkdown documents to ./docs/report with `render_all_reports()` or `render_report()`](#render-rmarkdown-files-to-reports)
 
 <br>
 
@@ -43,7 +43,7 @@ the install command again.)
 
 <br>
 
-## Create Project Directory
+## Create Project Directory {#create-project-directory}
 
 Run the function `new_project()` to create a new project. This will
 create a standardized directory with all the scaffolding we use for all
@@ -173,7 +173,7 @@ add a MIT license (if needed) and add package dependencies.
 
 <br>
 
-## Install Common Packages
+## Install Common Packages {#install-common-packages}
 
 You can install the packages that are most commonly used in our
 department via `install_d6_packages()`:
@@ -197,14 +197,14 @@ d6::install_d6_packages(geo = FALSE)
 The default packages that are going to be installed are:
 
 ``` text
-tidyverse (tibble, dplyr, tidyr, ggplot2, readr, forecats, stringr, purrr), lubridate, here, vroom, patchwork, usethis
+tidyverse (tibble, dplyr, tidyr, ggplot2, readr, forcats, stringr, purrr), lubridate, here, vroom, patchwork, remotes
 ```
 
 The following packages will be installed in case you specify
 `geo = TRUE`:
 
 ``` text
-rgdal, geos, raster, sp, sf, tmap
+sf, terra, stars, tmap
 ```
 
 <br>
@@ -213,12 +213,12 @@ rgdal, geos, raster, sp, sf, tmap
 
 <br>
 
-## Corporate ggplot2 Theme
+## Corporate ggplot2 Theme {#corporate-ggplot2-theme}
 
-The package provides a ggplot2 theme with sensible defautls and additional 
+The package provides a ggplot2 theme with sensible defaults and additional 
 utilities to simplify the process of creating a good-looking, clean look.
 Furthermore, we aim to have a consistent look across all our figures shown
-in manuscripts, presentations, and on posters.
+in manuscripts, presentations, and posters.
 
 The theme can be added to a ggplot object as usual:
 
@@ -229,7 +229,7 @@ ggplot(mpg, aes(x = displ, y = cty)) +
   d6::theme_d6()
 ```
 
-Or set as the new global theme by overwritting the current default:
+Or set as the new global theme by overwriting the current default:
 
 ```r
 theme_set(d6::theme_d6())
@@ -284,7 +284,7 @@ ggplot(mpg, aes(x = class, y = hwy, color = factor(year))) +
 
 <br>
 
-## Use Custom Rmarkdown Templates
+## Use Custom Rmarkdown Templates({#use-custom-rmarkdown-templates}
 
 The package also provides several templates for your scripts. In
 Rstudio, navigate to `File > New File > RMarkdown... > Templates` and
@@ -304,7 +304,7 @@ The following templates are available for now:
 
 <br>
 
-## Render Rmarkdown Files to Reports
+## Render Rmarkdown Files to Reports {#render-rmarkdown-files-to-reports}
 
 The `render_*()` functions take care of knitting your Rmarkdown files
 into HTML reports. The functions assume that your .Rmd files are saved
