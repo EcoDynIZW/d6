@@ -341,14 +341,14 @@ are installed already, installs them if needed, and loads them via
 at the same time. GitHub packages need to be specified as 
 "owner/repository" without any spaces.
 
-```{r, eval=false}
+``` r
 d6::simple_load(pcks = c("dplyr", "ggplot2", "EcoDynIZ/d6berlin"))
 ```
 
 You can also force a reinstallation of packages. CRAN and GitHub packages 
 are controlled individually via `update_cran` and `update_gh`, respectively.
 
-```{r, eval=false}
+``` r
 d6::simple_load(pcks = c("dplyr", "ggplot2", "EcoDynIZ/d6berlin"),
                 update_cran = TRUE, update_gh = TRUE)
 ```
