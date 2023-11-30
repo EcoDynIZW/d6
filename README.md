@@ -12,7 +12,7 @@ There are five main functionalities:
 
 1.  [Create standardized project directories with `new_project()`](#create-project-directory)
 2.  [Install a set of common packages with `install_d6_packages()`](#install-common-packages)
-3.  [3.  [Crerate figures that match our lab identity via `theme_d6()`](#corporate-ggplot2-theme)
+3.  [Create figures that match our lab identity via `theme_d6()`](#corporate-ggplot2-theme)
 4.  [Provide custom Rmarkdown templates via `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
 5.  [Render all your Rmarkdown documents to ./docs/report with `render_all_reports()` or `render_report()`](#render-rmarkdown-files-to-reports)
 
