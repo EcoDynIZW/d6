@@ -122,6 +122,7 @@ theme_d6 <- function(base_size = 14, base_family = "PT Sans",
       ),
       plot.title.position = "plot",
       plot.margin = ggplot2::margin(margin),
+      panel.background = ggplot2::element_rect(color = bg, fill = bg),
       plot.background = ggplot2::element_rect(color = bg, fill = bg)
     )
 
