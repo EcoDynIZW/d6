@@ -6,15 +6,17 @@
 > The goal of the `{d6}` package is to simplify the project workflow
 > within the department “Ecological Dynamics” at the Leibniz Institute
 > for Zoo and Wildlife Research by providing a standardized folder
-> structure, templates for reports and utility functions.
+> structure, templates for reports, and utility functions.
 
 There are five main functionalities:
 
 1.  [Create standardized project directories with `new_project()`](#create-project-directory)
 2.  [Install a set of common packages with `install_d6_packages()`](#install-common-packages)
-3.  [Provide a corporate ggplot2 theme with sensible defaults and additional utilities via `theme_d6()`](#corporate-ggplot2-theme)
+3.  [Create figures that match our lab identity via `theme_d6()`](#corporate-ggplot2-theme)
 4.  [Provide custom Rmarkdown templates via `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
-5.  [Render all Rmarkdown documents to ./docs/report with `render_all_reports()` or `render_report()`](#render-rmarkdown-files-to-reports)
+5.  [Render all your Rmarkdown documents to ./docs/report with `render_all_reports()` or `render_report()`](#render-rmarkdown-files-to-reports)
+
+<br>The function [`simple_load()` is a utility function](#simple-load-packages) that is currently in an experimental state. It allows you to install (if not yet) and load a set of packages—even a combination of CRAN and GitHub packages—in a single step.
 
 <br>
 
@@ -43,7 +45,7 @@ the install command again.)
 
 <br>
 
-## Create Project Directory
+## Create Project Directory {#create-project-directory}
 
 Run the function `new_project()` to create a new project. This will
 create a standardized directory with all the scaffolding we use for all
@@ -173,7 +175,7 @@ add a MIT license (if needed) and add package dependencies.
 
 <br>
 
-## Install Common Packages
+## Install Common Packages {#install-common-packages}
 
 You can install the packages that are most commonly used in our
 department via `install_d6_packages()`:
@@ -197,14 +199,14 @@ d6::install_d6_packages(geo = FALSE)
 The default packages that are going to be installed are:
 
 ``` text
-tidyverse (tibble, dplyr, tidyr, ggplot2, readr, forecats, stringr, purrr), lubridate, here, vroom, patchwork, usethis
+tidyverse (tibble, dplyr, tidyr, ggplot2, readr, forcats, stringr, purrr), lubridate, here, vroom, patchwork, remotes
 ```
 
 The following packages will be installed in case you specify
 `geo = TRUE`:
 
 ``` text
-rgdal, geos, raster, sp, sf, tmap
+sf, terra, stars, tmap
 ```
 
 <br>
@@ -213,12 +215,12 @@ rgdal, geos, raster, sp, sf, tmap
 
 <br>
 
-## Corporate ggplot2 Theme
+## Corporate ggplot2 Theme {#corporate-ggplot2-theme}
 
-The package provides a ggplot2 theme with sensible defautls and additional 
+The package provides a ggplot2 theme with sensible defaults and additional 
 utilities to simplify the process of creating a good-looking, clean look.
 Furthermore, we aim to have a consistent look across all our figures shown
-in manuscripts, presentations, and on posters.
+in manuscripts, presentations, and posters.
 
 The theme can be added to a ggplot object as usual:
 
@@ -229,7 +231,7 @@ ggplot(mpg, aes(x = displ, y = cty)) +
   d6::theme_d6()
 ```
 
-Or set as the new global theme by overwritting the current default:
+Or set as the new global theme by overwriting the current default:
 
 ```r
 theme_set(d6::theme_d6())
@@ -284,7 +286,7 @@ ggplot(mpg, aes(x = class, y = hwy, color = factor(year))) +
 
 <br>
 
-## Use Custom Rmarkdown Templates
+## Use Custom Rmarkdown Templates({#use-custom-rmarkdown-templates}
 
 The package also provides several templates for your scripts. In
 Rstudio, navigate to `File > New File > RMarkdown... > Templates` and
@@ -304,7 +306,7 @@ The following templates are available for now:
 
 <br>
 
-## Render Rmarkdown Files to Reports
+## Render Rmarkdown Files to Reports {#render-rmarkdown-files-to-reports}
 
 The `render_*()` functions take care of knitting your Rmarkdown files
 into HTML reports. The functions assume that your .Rmd files are saved
@@ -323,6 +325,32 @@ You can also render single Rmarkdown documents via `render_report()`:
 ``` r
 d6::render_report("my-report.Rmd")
 d6::render_report("notsurewhybutIhaveasubfolder/my-report.Rmd")
+```
+
+<br>
+
+------------------------------------------------------------------------
+
+<br>
+
+## Install and Load a Set of Packages {#simple-load-packages}
+
+The `simple_load()` function takes a vector of packages, checks if they 
+are installed already, installs them if needed, and loads them via 
+`library()` afterward. You can provide both, CRAN and GitHub packages, 
+at the same time. GitHub packages need to be specified as 
+"owner/repository" without any spaces.
+
+``` r
+d6::simple_load(pcks = c("dplyr", "ggplot2", "EcoDynIZ/d6berlin"))
+```
+
+You can also force a reinstallation of packages. CRAN and GitHub packages 
+are controlled individually via `update_cran` and `update_gh`, respectively.
+
+``` r
+d6::simple_load(pcks = c("dplyr", "ggplot2", "EcoDynIZ/d6berlin"),
+                update_cran = TRUE, update_gh = TRUE)
 ```
 
 <br>
