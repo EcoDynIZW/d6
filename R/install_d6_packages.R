@@ -7,9 +7,16 @@
 #' @export
 install_d6_packages <- function(geo = TRUE) {
   list.of.packages <- c(
-    "tidyverse", 
-    "here",
+    "readr",
+    "tibble",
+    "dplyr",
+    "tidyr",
+    "ggplot2",
+    "forcats",
+    "stringr",
+    "purrr",
     "lubridate",
+    "here",
     "patchwork",
     "vroom",
     "usethis",
@@ -18,13 +25,9 @@ install_d6_packages <- function(geo = TRUE) {
   if (geo == TRUE) {
     list.of.packages <- c(
       list.of.packages,
-      "rgdal",
-      "rgeos",
-      "raster",
-      "sp",
       "sf",
-      #"terra",
-      #"stars",
+      "terra",
+      "stars",
       "tmap"
     )
   }
