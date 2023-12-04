@@ -72,14 +72,14 @@ The full scaffolding structure including all subdirectories and additional files
 └── unicornus_wl_sdm_smith_j
     ├── .Rproj.user          —  Rproject files
     ├── data                 —  main folder data
-    │    ├── geo             —  main folder geospatial data
+    │    ├── geo             —  main folder geospatial data (if `geo = TRUE`)
     │    │    ├── processed  —  processed geospatial data files
     │    │    └── raw        —  raw geospatial data files
     │    ├── processed       —  processed tabular data files
     │    └── raw             —  raw tabular data files
     ├── docs                 —  documents
     │   ├── admin            —  administrative docs, e.g. permits 
-    │   ├── literature       —  literature used for parametrization + ms
+    │   ├── literature       —  literature used for parametrization + manuscript
     │   ├── manuscript       —  manuscript drafts (main + supplement)
     │   ├── presentations    —  talks and poster presentations
     │   └── reports          —  rendered reports
