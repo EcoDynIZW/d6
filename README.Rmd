@@ -77,7 +77,7 @@ The full scaffolding structure including all subdirectories and additional files
     │    │    └── raw        —  raw geospatial data files
     │    ├── processed       —  processed tabular data files
     │    └── raw             —  raw tabular data files
-    ├── docs                 —  documents
+    ├── docs                 —  documents main folder
     │   ├── admin            —  administrative docs, e.g. permits 
     │   ├── literature       —  literature used for parametrization + manuscript
     │   ├── manuscript       —  manuscript drafts (main + supplement)
@@ -85,9 +85,9 @@ The full scaffolding structure including all subdirectories and additional files
     │   └── reports          —  rendered reports
     ├── output               —  everything that is computed (except plots)
     ├── plots                —  plot output
-    ├── R                    —  scripts
-    │   ├── 00_start.R       —  first script to run
-    │   └── zz_submit.R      —  final script to run
+    ├── scripts              —  script files (e.g. .R, .Rmd, .Qmd, .py, .nlogo)
+    │   ├── 00_start.R       —  first script to run after project setup
+    │   └── zz_submit.R      —  final script to run before submission
     ├── .gitignore           —  contains which files to ignore for version control
     ├── .Rbuildignore        —  contains which files to ignore for package builds
     ├── DESCRIPTION          —  contains project details and package dependencies
