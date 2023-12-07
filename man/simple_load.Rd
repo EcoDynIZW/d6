@@ -7,8 +7,9 @@
 simple_load(pckgs = NULL, update_cran = FALSE, update_gh = FALSE)
 }
 \arguments{
-\item{pckgs}{A vector of packages to load. Packages from CRAN and GitHub can 
-be passed simultaneously.}
+\item{pckgs}{A vector of package names. Packages from CRAN and GitHub can 
+be passed simultaneously. For GitHub packages, pass the package formatted as 
+"owner/repository".}
 
 \item{update_cran}{Logical. Should CRAN packages be updated? Defaults to FALSE.}
 
@@ -18,6 +19,6 @@ be passed simultaneously.}
 Load Multiple Packages in One Go (and install them if necessary)
 }
 \examples{
-simple_load("ggplot2")
+simple_load("ggplot2", "EcoDynIZW/d6berlin")
 
 }

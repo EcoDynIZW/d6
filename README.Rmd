@@ -58,11 +58,11 @@ The main folders created in the root folder (here `unicornus_wl_sdm_smith_j`) ar
 ```{text eval=FALSE}
 .
 └── unicornus_wl_sdm_smith_j
-    ├── data-raw
+    ├── data
     ├── docs
     ├── output
     ├── plots
-    └── R
+    └── scripts
 ```
 
 The full scaffolding structure including all subdirectories and additional files looks like this:
@@ -70,28 +70,30 @@ The full scaffolding structure including all subdirectories and additional files
 ```{text}
 . 
 └── unicornus_wl_sdm_smith_j
-    ├── .Rproj.user         —  Rproject files
-    ├── data-raw            —  raw data (tabular data in root folder)
-    │    └── geo-raw        —  raw spatial data
-    ├── docs                —  documents
-    │   ├── admin           —  adminstrative docs, e.g. permits 
-    │   ├── literature      —  literature used for parameterization + ms
-    │   ├── manuscript      —  manuscript drafts (main + supplement)
-    │   ├── presentations   —  talks and poster presentations
-    │   └── reports         —  rendered reports
-    ├── output              —  everything that is computed (except plots)
-    │   ├── data-proc       —  processed tabular data
-    │   └── geo-proc        —  processed spatial data
-    ├── plots               —  plot output
-    ├── R                   —  scripts
-    │   ├── 00_start.R      —  first script to run
-    │   └── XX_submit.R     —  final script to run
-    ├── .gitignore          —  contains which files to ignore for version control
-    ├── .Rbuildignore       —  contains which files to ignore for package builds
-    ├── DESCRIPTION         —  contains project details and package dependencies
-    ├── NAMESPACE           —  contains context for R objects
-    └── project.Rproj       —  Rproject file: use to start your project
-```
+    ├── .Rproj.user          —  Rproject files
+    ├── data                 —  main folder data
+    │    ├── geo             —  main folder geospatial data (if `geo = TRUE`)
+    │    │    ├── processed  —  processed geospatial data files
+    │    │    └── raw        —  raw geospatial data files
+    │    ├── processed       —  processed tabular data files
+    │    └── raw             —  raw tabular data files
+    ├── docs                 —  documents main folder
+    │   ├── admin            —  administrative docs, e.g. permits 
+    │   ├── literature       —  literature used for parametrization + manuscript
+    │   ├── manuscript       —  manuscript drafts (main + supplement)
+    │   ├── presentations    —  talks and poster presentations
+    │   └── reports          —  rendered reports
+    ├── output               —  everything that is computed (except plots)
+    ├── plots                —  plot output
+    ├── scripts              —  script files (e.g. .R, .Rmd, .Qmd, .py, .nlogo)
+    │   ├── 00_start.R       —  first script to run after project setup
+    │   └── zz_submit.R      —  final script to run before submission
+    ├── .gitignore           —  contains which files to ignore for version control
+    ├── .Rbuildignore        —  contains which files to ignore for package builds
+    ├── DESCRIPTION          —  contains project details and package dependencies
+    ├── NAMESPACE            —  contains context for R objects
+    └── project.Rproj        —  Rproject file: use to start your project
+``` 
 
 #
 

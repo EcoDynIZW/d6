@@ -7,16 +7,16 @@
 #' @export
 install_d6_packages <- function(geo = TRUE) {
   list.of.packages <- c(
-    "tibble",
     "readr",
-    "tidyr",
+    "tibble",
     "dplyr",
+    "tidyr",
+    "ggplot2",
     "forcats",
     "stringr",
-    "ggplot2",
     "purrr",
-    "here",
     "lubridate",
+    "here",
     "patchwork",
     "vroom",
     "usethis",

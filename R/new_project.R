@@ -30,41 +30,54 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
     }
   }
   
-  ## create dir
+  ## create main dir + relevant files
   devtools::create(path_full, check_name = FALSE)
+  
+  ## remove R folder that is created by devtools::create()
+  unlink(file.path(path_full, "R"), recursive = TRUE) 
   
   usethis::proj_set(path_full)
   
   cat_green_tick("Created project directory")
   
   ## create directories
-  ## docs dir
-  dir.create(file.path(path_full, "docs"))
-  dir.create(file.path(path_full, "docs", "admin"))
+  
+  #> docs dirs
+  dir.create(file.path(path_full, "docs", "admin"), recursive = TRUE)
   dir.create(file.path(path_full, "docs", "literature"))
   dir.create(file.path(path_full, "docs", "manuscript"))
   dir.create(file.path(path_full, "docs", "presentations"))
   dir.create(file.path(path_full, "docs", "reports"))
-  ## data-raw dir
-  dir.create(file.path(path_full, "data-raw"))
-  if(geo == TRUE) { dir.create(file.path(path_full, "data-raw", "geo-raw")) }
-  ## output dir
+  
+  #> data dirs
+  dir.create(file.path(path_full, "data", "raw"), recursive = TRUE)
+  dir.create(file.path(path_full, "data", "processed"))
+  if(geo == TRUE) { 
+    dir.create(file.path(path_full, "data", "geo", "raw"), recursive = TRUE) 
+    dir.create(file.path(path_full, "data", "geo", "processed")) 
+  }
+  
+  #> output dirs
   dir.create(file.path(path_full, "output"))
   dir.create(file.path(path_full, "output", "data-proc"))
   if(geo == TRUE) { dir.create(file.path(path_full, "output", "geo-proc")) }
-  ## plots dir
+  
+  #> plots dir
   dir.create(file.path(path_full, "plots"))
+  
+  #> scripts dir
+  dir.create(file.path(path_full, "scripts"))
   
   cat_green_tick("Created directories")
   
   ## add scripts
   file.copy(
     system.file("00_start.R", package = "d6"),
-    file.path(path_full, "R")
+    file.path(path_full, "scripts")
   )
   file.copy(
-    system.file("XX_submit.R", package = "d6"),
-    file.path(path_full, "R")
+    system.file("zz_submit.R", package = "d6"),
+    file.path(path_full, "scripts")
   )
   
   cat_green_tick("Added helper scripts")
