@@ -16,7 +16,7 @@ There are five main functionalities:
 4.  [Provide custom Rmarkdown templates via `File > New File > Rmarkdown... > From Template`](#use-custom-rmarkdown-templates)
 5.  [Render all your Rmarkdown documents to ./docs/report with `render_all_reports()` or `render_report()`](#render-rmarkdown-files-to-reports)
 
-<br>The function [`simple_load()` is a utility function](#simple-load-packages) that is currently in an experimental state. It allows you to install (if not yet) and load a set of packages—even a combination of CRAN and GitHub packages—in a single step.
+<br>The function [`simple_load()` is a utility function](#install-and-load-a-set-of-packages) that is currently in an experimental state. It allows you to install (if not yet) and load a set of packages—even a combination of CRAN and GitHub packages—in a single step.
 
 <br>
 
@@ -45,7 +45,7 @@ the install command again.)
 
 <br>
 
-## Create Project Directory {#create-project-directory}
+## Create Project Directory
 
 Run the function `new_project()` to create a new project. This will
 create a standardized directory with all the scaffolding we use for all
@@ -90,7 +90,7 @@ additional files looks like this:
     ├── data-raw            —  raw data (tabular data in root folder)
     │   └── geo-raw         —  raw spatial data
     ├── docs                —  documents
-    │   ├── admin           —  adminstrative docs, e.g. permits 
+    │   ├── admin           —  administrative docs, e.g. permits 
     │   ├── literature      —  literature used for parameterization + ms
     │   ├── manuscript      —  manuscript drafts (main + supplement)
     │   ├── presentations   —  talks and poster presentations
@@ -175,7 +175,7 @@ add a MIT license (if needed) and add package dependencies.
 
 <br>
 
-## Install Common Packages {#install-common-packages}
+## Install Common Packages
 
 You can install the packages that are most commonly used in our
 department via `install_d6_packages()`:
@@ -215,7 +215,7 @@ sf, terra, stars, tmap
 
 <br>
 
-## Corporate ggplot2 Theme {#corporate-ggplot2-theme}
+## Corporate ggplot2 Theme
 
 The package provides a ggplot2 theme with sensible defaults and additional 
 utilities to simplify the process of creating a good-looking, clean look.
@@ -286,7 +286,7 @@ ggplot(mpg, aes(x = class, y = hwy, color = factor(year))) +
 
 <br>
 
-## Use Custom Rmarkdown Templates({#use-custom-rmarkdown-templates}
+## Use Custom Rmarkdown Templates
 
 The package also provides several templates for your scripts. In
 Rstudio, navigate to `File > New File > RMarkdown... > Templates` and
@@ -306,7 +306,7 @@ The following templates are available for now:
 
 <br>
 
-## Render Rmarkdown Files to Reports {#render-rmarkdown-files-to-reports}
+## Render Rmarkdown Files to Reports
 
 The `render_*()` functions take care of knitting your Rmarkdown files
 into HTML reports. The functions assume that your .Rmd files are saved
@@ -333,7 +333,7 @@ d6::render_report("notsurewhybutIhaveasubfolder/my-report.Rmd")
 
 <br>
 
-## Install and Load a Set of Packages {#simple-load-packages}
+## Install and Load a Set of Packages
 
 The `simple_load()` function takes a vector of packages, checks if they 
 are installed already, installs them if needed, and loads them via 
