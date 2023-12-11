@@ -6,7 +6,6 @@
 #' @param path Path of the new project where the folder is created. If empty then the current working directory is used.
 #' @param github Logical. Create GitHub repo? Note this requires a \code{GITHUB_PAT}. See instructions \href{URL}{https://gist.github.com/Z3tt/3dab3535007acf108391649766409421}{here}.
 #' @param private_repo Logical. Should the repo be private or public? Default is \code{TRUE} which equals to private.
-#' @param geo Logical. Create directories for spatial data? Default is \code{TRUE}.
 #'
 #' @return A new directory with a project structure based on the common package structure, slightly modified. Also includes scripts for start and end of each project.
 #' @export
@@ -14,7 +13,7 @@
 #' @importFrom cli cat_bullet 
 #' @importFrom utils menu
 #'
-new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRUE, geo = TRUE){
+new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRUE){
   
   ## check path string
   end <- substr(path, (nchar(path) + 1) - 1, nchar(path))
@@ -31,7 +30,8 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   }
   
   ## create main dir + relevant files
-  devtools::create(path_full, check_name = FALSE)
+  #devtools::create(path_full, check_name = FALSE)
+  usethis::create_project(path_full)
   
   ## remove R folder that is created by devtools::create()
   unlink(file.path(path_full, "R"), recursive = TRUE) 
@@ -50,17 +50,11 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   dir.create(file.path(path_full, "docs", "reports"))
   
   #> data dirs
-  dir.create(file.path(path_full, "data", "raw"), recursive = TRUE)
-  dir.create(file.path(path_full, "data", "processed"))
-  if(geo == TRUE) { 
-    dir.create(file.path(path_full, "data", "geo", "raw"), recursive = TRUE) 
-    dir.create(file.path(path_full, "data", "geo", "processed")) 
-  }
+  dir.create(file.path(path_full, "data", "raw", "geo"), recursive = TRUE)
+  dir.create(file.path(path_full, "data", "processed", "geo"), recursive = TRUE)
   
-  #> output dirs
-  dir.create(file.path(path_full, "output"))
-  dir.create(file.path(path_full, "output", "data-proc"))
-  if(geo == TRUE) { dir.create(file.path(path_full, "output", "geo-proc")) }
+  #> results dirs
+  dir.create(file.path(path_full, "results"))
   
   #> plots dir
   dir.create(file.path(path_full, "plots"))
@@ -82,6 +76,9 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
   
   cat_green_tick("Added helper scripts")
   
+  ## add README
+  usethis::use_readme_md(open = TRUE)
+  
   ## add GitHub
   if (github){
     usethis::use_git()
@@ -97,7 +94,7 @@ new_project <- function(name, path = getwd(), github = FALSE, private_repo = TRU
       " was created at ", 
       fs::path_abs(path),
       ".\n\n", 
-      "To continue working on your project, start editing the 00_start.R file in the new Rstudio session."
+      "To continue working on your project, start editing the README.md file in the new Rstudio session.",
     )
   )
   

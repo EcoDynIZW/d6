@@ -18,7 +18,6 @@ install_d6_packages <- function(geo = TRUE) {
     "lubridate",
     "here",
     "patchwork",
-    "vroom",
     "usethis",
     "remotes"
   )
