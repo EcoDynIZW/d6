@@ -24,7 +24,7 @@ h2, h3, h4, h5, h6, legend {
 p {
   line-height:170%;
 }
-#sidebar h2 {
+sidebar h2 {
   background-color: Indigo;
 }
 code {
