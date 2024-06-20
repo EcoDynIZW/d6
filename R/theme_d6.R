@@ -53,51 +53,65 @@ theme_d6 <- function(base_size = 14, base_family = "PT Sans",
   if(!is.numeric(margin) & length(margin) != 4) stop('margin must a be four-element numeric vector specifying the margin on the top, right, bottom, and left.')
   
   half_line <- base_size/2
-
+  
   ## typefaces
-  fonts_unavailable <- vector("character")
-
-  ## base_family for all non-numeric text elements
-  ## either serif or sans depending on `serif` argument value
-  if (serif == FALSE) {
-    if (sum(grepl("PT Sans", systemfonts::system_fonts()$family)) == 0) {
-      base_family <- ""
-      fonts_unavailable <- c(fonts_unavailable, "PT Sans")
+  if (base_family == "PT Sans") {
+    
+    fonts_unavailable <- vector("character")
+  
+    ## base_family for all non-numeric text elements
+    ## either serif or sans depending on `serif` argument value
+    if (serif == FALSE) {
+      if (sum(grepl("PT Sans", systemfonts::system_fonts()$family)) == 0) {
+        base_family <- ""
+        fonts_unavailable <- c(fonts_unavailable, "PT Sans")
+      } else {
+        base_family <- "PT Sans"
+      }
     } else {
-      base_family <- "PT Sans"
+      if (sum(grepl("PT Serif", systemfonts::system_fonts()$family)) == 0) {
+        base_family <- ""
+        fonts_unavailable <- c(fonts_unavailable, "PT Serif")
+      } else {
+        base_family <- "PT Serif"
+      }
     }
-  } else {
-    if (sum(grepl("PT Serif", systemfonts::system_fonts()$family)) == 0) {
-      base_family <- ""
-      fonts_unavailable <- c(fonts_unavailable, "PT Serif")
+  
+    ## tabular typeface for text elements displaying numbers
+    if (!mono %in% c("none", "") & sum(grepl("PT Mono", systemfonts::system_fonts()$family)) == 0) {
+      mono_family <- ""
+      fonts_unavailable <- c(fonts_unavailable, "PT Mono")
     } else {
-      base_family <- "PT Serif"
+      mono_family <- "PT Mono"
     }
-  }
-
-  ## tabular typeface for text elements displaying numbers
-  if (!mono %in% c("none", "") & sum(grepl("PT Mono", systemfonts::system_fonts()$family)) == 0) {
-    mono_family <- ""
-    fonts_unavailable <- c(fonts_unavailable, "PT Mono")
-  } else {
-    mono_family <- "PT Mono"
-  }
-
-  if (length(fonts_unavailable) > 0) {
-    fonts_unavailable <- data.frame(name = fonts_unavailable)
-    font_urls <- data.frame(
-      name = c("PT Sans", "PT Serif", "PT Mono"),
-      url = paste0(
-        "https://fonts.google.com/specimen/",
-        c("PT+Sans", "PT+Serif", "PT+Mono")
+    
+    if (length(fonts_unavailable) > 0) {
+      fonts_unavailable <- data.frame(name = fonts_unavailable)
+      font_urls <- data.frame(
+        name = c("PT Sans", "PT Serif", "PT Mono"),
+        url = paste0(
+          "https://fonts.google.com/specimen/",
+          c("PT+Sans", "PT+Serif", "PT+Mono")
+        )
       )
-    )
-    fonts_unavailable <- merge(fonts_unavailable, font_urls, by = "name")
-    message(paste(
-      "Using system default fonts. If you want to use the correct fonts in `theme_d6()`, please install the following font(s) and restart your R session.",
-      paste0("  - ", fonts_unavailable$name, ": ", fonts_unavailable$url, collapse = "\n"),
-      sep = "\n"
-    ))
+      fonts_unavailable <- merge(fonts_unavailable, font_urls, by = "name")
+      message(paste(
+        "Using system default fonts. If you want to use the correct fonts in `theme_d6()`, please install the following font(s) and restart your R session.",
+        paste0("  - ", fonts_unavailable$name, ": ", fonts_unavailable$url, collapse = "\n"),
+        sep = "\n"
+      ))
+    }
+  }
+   
+  if (base_family != "PT Sans") {
+    message("You have specified a custom base family. The options `serif` and `mono` are ignored.")
+    
+    if (sum(grepl(base_family, systemfonts::system_fonts()$family)) == 0) {
+      base_family <- ""
+      message("Using system default fonts as the specified base family is not installed on your computer.")
+    }
+    
+    mono_family <- base_family
   }
 
   ## theme
